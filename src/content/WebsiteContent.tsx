@@ -1,5 +1,5 @@
 import React, { useState, Suspense } from 'react';
-import { Github, Linkedin, Instagram, Globe2 } from 'lucide-react';
+import { Github, Instagram, Globe2 } from 'lucide-react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 
@@ -155,9 +155,6 @@ const WebsiteContent: React.FC = () => {
                   <div className="mt-6 flex gap-4">
                     <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
                       <Github className="w-6 h-6" />
-                    </a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
-                      <Linkedin className="w-6 h-6" />
                     </a>
                     <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
                       <Instagram className="w-6 h-6" />
