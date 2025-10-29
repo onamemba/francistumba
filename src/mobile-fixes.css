@@ -1,0 +1,253 @@
+/* Mobile Layout Fixes and Font Size Increases */
+
+/* Hero Image - Perfect Centering */
+.hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.hero-image img {
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+/* Hero Section Mobile - Tighter spacing */
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 1.5rem 2rem;
+  }
+
+  .hero-content {
+    gap: 0.5rem;
+  }
+
+  .hero-image {
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-text {
+    margin-top: 0;
+  }
+
+  .hero-name {
+    font-size: 1.75rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .hero-title {
+    font-size: 2.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* Increased Font Sizes - All Pages */
+
+/* Hero Section */
+.hero-name {
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+@media (min-width: 769px) {
+  .hero-name {
+    font-size: 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 5rem;
+  }
+}
+
+/* About Section */
+.about-content p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .about-content p {
+    font-size: 1.125rem;
+  }
+}
+
+/* Skills Section */
+.skills-list li {
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+.skill-header {
+  font-size: 1.375rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .skills-list li {
+    font-size: 1rem;
+  }
+
+  .skill-header {
+    font-size: 1.25rem;
+  }
+}
+
+/* Experience Section */
+.experience-company {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.experience-role {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0.75rem 0;
+}
+
+.experience-details li {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  margin-bottom: 0.5rem;
+}
+
+.experience-period {
+  font-size: 1.125rem;
+}
+
+@media (max-width: 640px) {
+  .experience-company {
+    font-size: 1.375rem;
+  }
+
+  .experience-role {
+    font-size: 1.125rem;
+  }
+
+  .experience-details li {
+    font-size: 1rem;
+  }
+}
+
+/* Education Section */
+.education-degree {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.education-school {
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 640px) {
+  .education-degree {
+    font-size: 1.25rem;
+  }
+
+  .education-school {
+    font-size: 1rem;
+  }
+}
+
+/* Certifications Section */
+.certification-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .certification-name {
+    font-size: 1.125rem;
+  }
+}
+
+/* Contact Section */
+.contact-content p {
+  font-size: 1.375rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.contact-link {
+  font-size: 1.25rem !important;
+  padding: 1rem 0;
+}
+
+@media (max-width: 640px) {
+  .contact-content p {
+    font-size: 1.25rem;
+  }
+
+  .contact-link {
+    font-size: 1.125rem !important;
+  }
+}
+
+/* Button Font Sizes */
+.btn-primary,
+.btn-secondary,
+.btn-outline {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+}
+
+@media (min-width: 769px) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline {
+    font-size: 1.125rem;
+    padding: 1.125rem 2.5rem;
+  }
+}
+
+/* Navigation Font Sizes */
+.nav-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.nav-cta {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 769px) {
+  .nav-title {
+    font-size: 1.5rem;
+  }
+
+  .nav-cta {
+    font-size: 1rem;
+  }
+}
+
+/* Section Indicator */
+.section-indicator {
+  font-size: 1rem;
+}
+
+@media (min-width: 769px) {
+  .section-indicator {
+    font-size: 1.125rem;
+  }
+}
+
+/* Mobile Section Spacing */
+@media (max-width: 640px) {
+  .section {
+    padding: 90px 1.5rem 2rem;
+  }
+
+  .section-content {
+    gap: 1.5rem;
+  }
+}
