@@ -223,7 +223,7 @@ function App() {
           <div className="section-right">
             <motion.div className="about-content" variants={itemVariants}>
               <motion.p variants={itemVariants}>
-                Imagine turning chaos into clarity with a single idea. That’s the spark that drives me every day.
+                Imagine turning chaos into clarity with a single idea. That's the spark that drives me every day.
                 I love using technology to turn big ideas into simple, powerful solutions. Making work flow easier. Building systems 
                 that grow without a hitch.
               </motion.p>
@@ -232,16 +232,8 @@ function App() {
                 
               </motion.p>
               <motion.p variants={itemVariants}>
-              Let’s build something incredible together.
+              Let's build something incredible together.
               </motion.p>
-              <motion.button 
-                className="btn-outline"
-                variants={itemVariants}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                LINKEDIN <ArrowUpRight size={16} />
-              </motion.button>
             </motion.div>
           </div>
         </div>
