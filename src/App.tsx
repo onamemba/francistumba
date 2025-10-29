@@ -188,7 +188,6 @@ function App() {
                   whileTap={{ scale: 0.95, y: 2 }}
                 >
                   GET IN TOUCH <ArrowUpRight size={16} />
-                 style={{ objectPosition: 'center 20%' }}
                 </motion.button>
               </div>
             </div>
