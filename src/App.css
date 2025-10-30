@@ -149,7 +149,7 @@ body {
 
 .hero-image img {
   width: 90%;                       /* scale down to fit */
-  height: 100%;                      /* keeps aspect ratio */
+  height: 120%;                      /* keeps aspect ratio */
   display: block;
 }
 
