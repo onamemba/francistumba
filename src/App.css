@@ -145,7 +145,7 @@ body {
 .hero-image img {
   width: 90%;                       /* scale down to fit */
   height: 90%;                      /* keeps aspect ratio */
-  object-fit: contain;              /* SHOWS ENTIRE IMAGE */
+  object-fit: cover;              /* SHOWS ENTIRE IMAGE */
   object-position: center;          /* centers it */
   display: block;
 }
