@@ -9,7 +9,7 @@
 }
 
 .hero-image img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: 40%;
   display: block;
 }

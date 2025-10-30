@@ -148,8 +148,8 @@ body {
   object-fit: cover !important;
   position: relative !important;
   top: 70% !important;             /* PUSH IMAGE UP → hair visible */
-  left: 50% !important;
-  transform: translateX(-50%) !important;
+  object-fit: contain;
+  object-position: center center;
 }
 
 .hero-text {
@@ -388,7 +388,7 @@ body {
 
 .skills-list li {
   display: block;
-  transform: scale(0.9);
+  transform: scale(1);
 }
 
 .skill-header {
