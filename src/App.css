@@ -152,7 +152,7 @@ body {
   width: 100%;                       /* scale down to fit */
   height: 100%;                      /* keeps aspect ratio */
   object-fit: fill;
-  object-position: center 10000%;
+  object-position: left 10000%;
   display: block;
 }
 
