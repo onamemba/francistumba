@@ -150,8 +150,6 @@ body {
 .hero-image img {
   width: 100%;                       /* scale down to fit */
   height: 150%;   
-  /* keeps aspect ratio */
-
   object-fit: scale-down;
   display: block;
 }
