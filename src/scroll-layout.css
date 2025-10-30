@@ -124,10 +124,6 @@
   font-size: 3.5rem;
   font-weight: 800;
   line-height: 1.2;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
 }
 
 @media (max-width: 1024px) {
@@ -157,6 +153,33 @@
   line-height: 1.75;
 }
 
+/* Section Icon and Subtitle */
+.section-icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.section-icon {
+  color: #00ff88;
+  width: 24px;
+  height: 24px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.section-cta {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
 @media (max-width: 640px) {
   .section-right {
     font-size: 1rem;
@@ -180,7 +203,13 @@
 .skills-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
+}
+
+.skills-list li {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #cccccc;
 }
 
 /* Experience Items - Better Spacing */

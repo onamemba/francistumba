@@ -214,11 +214,16 @@ function App() {
         <div className="section-content">
           <div className="section-left">
             <motion.h2 className="section-title" variants={itemVariants}>
-              <User size={24} className="title-icon" />
               ABOUT ME
             </motion.h2>
           </div>
           <div className="section-right">
+            <motion.div className="section-icon-container" variants={itemVariants}>
+              <User size={24} className="section-icon" />
+            </motion.div>
+            <motion.h3 className="section-subtitle" variants={itemVariants}>
+              Software Engineer
+            </motion.h3>
             <motion.div className="about-content" variants={itemVariants}>
               <motion.p variants={itemVariants}>
                 Imagine turning chaos into clarity with a single idea. That's the spark that drives me every day.
@@ -232,6 +237,16 @@ function App() {
               <motion.p variants={itemVariants}>
               Let's build something incredible together.
               </motion.p>
+            </motion.div>
+            <motion.div className="section-cta" variants={itemVariants}>
+              <motion.a 
+                href="https://linkedin.com/in/francistumba" 
+                className="btn-outline"
+                variants={itemVariants}
+                whileHover={{ scale: 1.05, x: 10 }}
+              >
+                <Linkedin size={16} /> LINKEDIN
+              </motion.a>
             </motion.div>
           </div>
         </div>
@@ -249,40 +264,29 @@ function App() {
         <div className="section-content">
           <div className="section-left">
             <motion.h2 className="section-title" variants={itemVariants}>
-              <Cpu size={24} className="title-icon" />
               SKILLS
             </motion.h2>
           </div>
           <div className="section-right">
+            <motion.div className="section-icon-container" variants={itemVariants}>
+              <Cpu size={24} className="section-icon" />
+            </motion.div>
+            <motion.h3 className="section-subtitle" variants={itemVariants}>
+              Areas of Expertise
+            </motion.h3>
             <motion.div className="skills-content" variants={itemVariants}>
               <ul className="skills-list">
                 <motion.li variants={itemVariants}>
-                  <div className="skill-header">
-                    <Code size={16} />
-                    <strong>Coding & Software Development</strong>
-                  </div>
-                  <p>Proficient in Python, JavaScript, SQL, React, and TypeScript. Experienced in end-to-end software and API development.</p>
+                  • Describe a skill or area of expertise.
                 </motion.li>
                 <motion.li variants={itemVariants}>
-                  <div className="skill-header">
-                    <Database size={16} />
-                    <strong>Design & Architecture</strong>
-                  </div>
-                  <p>Skilled in building scalable data pipelines, microservices, and cloud infrastructures using AWS and Snowflake.</p>
+                  • Describe a skill or area of expertise.
                 </motion.li>
                 <motion.li variants={itemVariants}>
-                  <div className="skill-header">
-                    <Cloud size={16} />
-                    <strong>Automation & DevOps</strong>
-                  </div>
-                  <p>Experienced in CI/CD pipelines, Docker, Terraform, and workflow automation.</p>
+                  • Describe a skill or area of expertise.
                 </motion.li>
                 <motion.li variants={itemVariants}>
-                  <div className="skill-header">
-                    <Monitor size={16} />
-                    <strong>Data & Analytics</strong>
-                  </div>
-                  <p>Expert in data warehousing, ETL processes, and building data-driven systems for business intelligence.</p>
+                  • Describe a skill or area of expertise.
                 </motion.li>
               </ul>
             </motion.div>
@@ -302,7 +306,6 @@ function App() {
         <div className="section-content">
           <div className="section-left">
             <motion.h2 className="section-title" variants={itemVariants}>
-              <Terminal size={24} className="title-icon" />
               WORK
               <br />
               EXPERIENCE
@@ -366,7 +369,6 @@ function App() {
         <div className="section-content">
           <div className="section-left">
             <motion.h2 className="section-title" variants={itemVariants}>
-              <Code size={24} className="title-icon" />
               EDUCATION
             </motion.h2>
           </div>
@@ -397,7 +399,6 @@ function App() {
         <div className="section-content">
           <div className="section-left">
             <motion.h2 className="section-title" variants={itemVariants}>
-              <Cloud size={24} className="title-icon" />
               CERTIFICATIONS
             </motion.h2>
           </div>
@@ -439,7 +440,6 @@ function App() {
         <div className="section-content">
           <div className="section-left">
             <motion.h2 className="section-title" variants={itemVariants}>
-              <Mail size={24} className="title-icon" />
               CONTACT
             </motion.h2>
           </div>
