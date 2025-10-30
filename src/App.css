@@ -143,13 +143,11 @@ body {
 /* Line 151-200: Navigation Styles */
 
 .hero-image img {
-  width: 100% !important;           /* ZOOM OUT to show full head */
-  height: 100% !important;
-  object-fit: cover !important;
-  position: center !important;
-  top: 60% !important;             /* PUSH IMAGE UP → hair visible */
-  object-fit: contain;
-  object-position: center center;
+  width: 90%;                       /* scale down to fit */
+  height: 90%;                      /* keeps aspect ratio */
+  object-fit: contain;              /* SHOWS ENTIRE IMAGE */
+  object-position: center;          /* centers it */
+  display: block;
 }
 
 .hero-text {
