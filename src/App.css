@@ -150,7 +150,7 @@ body {
 .hero-image img {
   width: 50%;                       /* scale down to fit */
   height: 50%;   
-  object-fit: contain;
+  object-fit: fill;
   object-position: 40% 100%;
   display: block;
 }
