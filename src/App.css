@@ -151,6 +151,7 @@ body {
   width: 100%;                       /* scale down to fit */
   height: 150%;   
   object-fit: scale-down;
+  object-position: 80% 100%;
   display: block;
 }
 
