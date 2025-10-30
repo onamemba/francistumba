@@ -150,8 +150,8 @@ body {
 .hero-image img {
   width: 50%;                       /* scale down to fit */
   height: 50%;   
-  object-fit: fill;
-  object-position: 40% 100%;
+  object-fit: cover;
+  object-position: center 25%;
   display: block;
 }
 
@@ -391,7 +391,7 @@ body {
 
 .skills-list li {
   display: block;
-  transform: scale(0.9);
+  transform: scale(1);
 }
 
 .skill-header {
@@ -534,7 +534,7 @@ body {
 }
 
 .project-card:hover {
-  transform: scale(0.95);
+  transform: scale(1.05);
 }
 
 .project-icon {
