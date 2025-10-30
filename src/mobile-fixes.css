@@ -9,8 +9,8 @@
 }
 
 .hero-image img {
-  object-fit: contain;
-  object-position: center center;
+  object-fit: cover;
+  object-position: center 35%;
   display: block;
 }
 
