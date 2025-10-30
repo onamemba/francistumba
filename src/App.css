@@ -147,7 +147,7 @@ body {
   height: 100% !important;
   object-fit: cover !important;
   position: relative !important;
-  top: 100% !important;             /* PUSH IMAGE UP → hair visible */
+  top: 50% !important;             /* PUSH IMAGE UP → hair visible */
   object-fit: cover;
   object-position: center 30%;
 }
