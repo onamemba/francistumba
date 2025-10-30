@@ -144,8 +144,8 @@ function App() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
       >
-        <div className="hero-content">
-          <div className="hero-left">
+        <div className="hero-content-new">
+          <div className="hero-image-container">
             <motion.div 
               className="hero-image"
               initial={{ opacity: 0, scale: 0.8, rotateY: -20 }}
@@ -159,8 +159,7 @@ function App() {
               />
             </motion.div>
           </div>
-          <div className="hero-right">
-            <div className="hero-text">
+          <div className="hero-content-right">
               <motion.h2 
                 className="hero-name"
                 initial={{ opacity: 0, x: -100 }}
@@ -190,7 +189,6 @@ function App() {
                   GET IN TOUCH <ArrowUpRight size={16} />
                 </motion.button>
               </div>
-            </div>
           </div>
         </div>
         <motion.div 
