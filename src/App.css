@@ -148,8 +148,8 @@ body {
 /* Line 151-200: Navigation Styles */
 
 .hero-image img {
-  width: 150%;                       /* scale down to fit */
-  height: 100%;   
+  width: 200%;                       /* scale down to fit */
+  height: 200%;   
   object-fit: contain;
   object-position: 40% 100%;
   display: block;
