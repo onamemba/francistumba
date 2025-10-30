@@ -25,7 +25,7 @@ const WebsiteContent: React.FC = () => {
                 src="/images/profile_face_image.jpg"
                 alt="Profile"
                 className="w-48 h-48 rounded-full object-cover border-4 border-gray-300 shadow-[10px_8px_0px_0px_rgba(128,128,128,0.10)] flex-shrink-0"
-                style={{ objectPosition: 'center 30%', transform: 'scale(1.2)' }}
+                style={{ objectPosition: 'center 0%', transform: 'scale(1.2)' }}
               />
               <div className="flex-1">
                 <h1 className="page-content font-press-start text-lg mb-4">About Me</h1>
