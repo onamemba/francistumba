@@ -144,7 +144,7 @@ body {
 
 .hero-image img {
   width: 100% !important;           /* ZOOM OUT to show full head */
-  height: 1000% !important;
+  height: 100% !important;
   object-fit: cover !important;
   position: relative !important;
   top: -15% !important;             /* PUSH IMAGE UP → hair visible */
