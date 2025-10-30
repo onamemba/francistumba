@@ -150,9 +150,7 @@ body {
 
 .hero-image img {
   width: 100%;                       /* scale down to fit */
-  height: 100%;                      /* keeps aspect ratio */
-  object-fit: fill;
-  display: block;
+  height: 100%;                      /* keeps aspect ratio */  display: block;
 }
 
 .hero-text {
