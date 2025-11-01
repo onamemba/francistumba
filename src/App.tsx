@@ -446,31 +446,36 @@ function App() {
           <div className="section-right">
             <motion.div className="contact-content" variants={itemVariants}>
               <motion.p variants={itemVariants}>Ready to collaborate? Let's discuss your next project.</motion.p>
-              <motion.div className="contact-links" variants={itemVariants}>
-                <motion.a 
-                  href="mailto:onamemba@gmail.com" 
-                  className="contact-link"
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05, x: 10 }}
-                >
-                  <Mail size={16} /> onamemba@gmail.com
-                </motion.a>
-                <motion.a 
-                  href="https://linkedin.com/in/francistumba" 
-                  className="contact-link"
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05, x: 10 }}
-                >
-                  <Linkedin size={16} /> LinkedIn
-                </motion.a>
-                <motion.a 
-                  href="https://github.com/francistumba" 
-                  className="contact-link"
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05, x: 10 }}
-                >
-                  <Github size={16} /> GitHub
-                </motion.a>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem', flexWrap: 'wrap' }}>
+                <motion.div className="contact-links" variants={itemVariants} style={{ flex: '1', minWidth: '300px' }}>
+                  <motion.a 
+                    href="mailto:onamemba@gmail.com" 
+                    className="contact-link"
+                    variants={itemVariants}
+                    whileHover={{ scale: 1.05, x: 10 }}
+                  >
+                    <Mail size={16} /> onamemba@gmail.com
+                  </motion.a>
+                  <motion.a 
+                    href="https://linkedin.com/in/francistumba" 
+                    className="contact-link"
+                    variants={itemVariants}
+                    whileHover={{ scale: 1.05, x: 10 }}
+                  >
+                    <Linkedin size={16} /> LinkedIn
+                  </motion.a>
+                  <motion.a 
+                    href="https://github.com/francistumba" 
+                    className="contact-link"
+                    variants={itemVariants}
+                    whileHover={{ scale: 1.05, x: 10 }}
+                  >
+                    <Github size={16} /> GitHub
+                  </motion.a>
+                </motion.div>
+                <motion.div variants={itemVariants}>
+                  <Engineering3D />
+                </motion.div>
               </motion.div>
             </motion.div>
           </div>
