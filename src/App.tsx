@@ -476,7 +476,7 @@ function App() {
                 <motion.div variants={itemVariants}>
                   <Engineering3D />
                 </motion.div>
-              </motion.div>
+              </div>
             </motion.div>
           </div>
         </div>
