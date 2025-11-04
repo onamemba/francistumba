@@ -272,24 +272,10 @@ function App() {
                 </motion.li>
                 <motion.li variants={itemVariants}>
                   <div className="skill-header">
-                    <Database size={16} />
-                    <strong style={{ color: 'white' }}>Data & Clear Insights</strong>
-                  </div>
-                  <p>Adept at turning numbers into simple visual reports. I organize your sales and customer data so you can spot opportunities and make strong decisions.</p>
-                </motion.li>
-                <motion.li variants={itemVariants}>
-                  <div className="skill-header">
                     <Zap size={16} />
-                    <strong style={{ color: 'white' }}>AI & Smart Automation</strong>
+                    <strong style={{ color: 'white' }}>Data, AI & Smart Automation</strong>
                   </div>
-                  <p>Proficient in adding AI to your tools like instant chat support, sales predictions and self-improving workflows that work smarter every day.</p>
-                </motion.li>
-                <motion.li variants={itemVariants}>
-                  <div className="skill-header">
-                    <Monitor size={16} />
-                    <strong style={{ color: 'white' }}>Smart IT Planning</strong>
-                  </div>
-                  <p>Skilled at choosing and building the right tools to meet your goals. I create online platforms and systems that save time and increase profits.</p>
+                  <p>I use AI to design smarter systems from the start. I generate clean data flows, predict project risks and automate workflows so every solution launches faster, runs smoother and delivers real business results from day one.</p>
                 </motion.li>
                 <motion.li variants={itemVariants}>
                   <div className="skill-header">
