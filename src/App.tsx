@@ -238,64 +238,60 @@ function App() {
       </motion.section>
 
       {/* Skills Section */}
-      <motion.section
+      <section
         id="skills"
         className="section scroll-section"
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
       >
         <div className="section-content">
           <div className="section-left">
-            <motion.h2 className="section-title" variants={itemVariants}>
+            <h2 className="section-title">
               <Cpu size={24} className="title-icon" />
               SKILLS
-            </motion.h2>
+            </h2>
           </div>
           <div className="section-right">
-            <motion.div className="skills-content" variants={itemVariants}>
-              <motion.ul className="skills-list" variants={itemVariants}>
-                <motion.li variants={itemVariants}>
+            <div className="skills-content">
+              <ul className="skills-list">
+                <li>
                   <div className="skill-header">
                     <Cloud size={16} />
                     <strong style={{ color: 'white' }}>Cloud Systems & Growth</strong>
                   </div>
                   <p>Expert in setting up cloud systems that keep your website, app or store fast and reliable. I lower costs and help your business grow without tech headaches.</p>
-                </motion.li>
-                <motion.li variants={itemVariants}>
+                </li>
+                <li>
                   <div className="skill-header">
                     <Code size={16} />
                     <strong style={{ color: 'white' }}>Project Leadership</strong>
                   </div>
                   <p>Strong at leading tech projects from start to success. I manage teams, timelines and budgets to deliver real results on time every time.</p>
-                </motion.li>
-                <motion.li variants={itemVariants}>
+                </li>
+                <li>
                   <div className="skill-header">
                     <Database size={16} />
                     <strong style={{ color: 'white' }}>Data & Clear Insights</strong>
                   </div>
                   <p>Adept at turning numbers into simple visual reports. I organize your sales and customer data so you can spot opportunities and make strong decisions.</p>
-                </motion.li>
-                <motion.li variants={itemVariants}>
+                </li>
+                <li>
                   <div className="skill-header">
                     <Zap size={16} />
                     <strong style={{ color: 'white' }}>AI & Smart Automation</strong>
                   </div>
                   <p>Proficient in adding AI to your tools like instant chat support, sales predictions and self-improving workflows that work smarter every day.</p>
-                </motion.li>
-                <motion.li variants={itemVariants}>
+                </li>
+                <li>
                   <div className="skill-header">
                     <Monitor size={16} />
                     <strong style={{ color: 'white' }}>Smart IT Planning</strong>
                   </div>
                   <p>Skilled at choosing and building the right tools to meet your goals. I create online platforms and systems that save time and increase profits.</p>
-                </motion.li>
-              </motion.ul>
-            </motion.div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Work Experience Section */}
       <motion.section
