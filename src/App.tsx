@@ -320,9 +320,8 @@ function App() {
                 <li>• Optimized data warehouses and automated reporting, reducing manual work by 80%</li>
                 <li>• Built real-time analytics dashboards that improved business decision-making speed by 50%</li>
                 <li>• Led data architecture initiatives and mentored junior engineers on best practices</li>
-              </div>
+              </ul>
             </div>
-              <div className="experience-item">
             <div className="experience-item">
               <div className="experience-header">
                 <div className="experience-company">AutumnLeaf IT</div>
@@ -334,9 +333,8 @@ function App() {
                 <li>• Managed infrastructure using AWS CloudFormation and Docker, supporting 500+ daily transactions</li>
                 <li>• Implemented monitoring and alerting systems that improved system reliability by 35%</li>
                 <li>• Collaborated with development teams to optimize application performance and scalability</li>
-              </div>
+              </ul>
             </div>
-              <div className="experience-item">
             <div className="experience-item">
               <div className="experience-header">
                 <div className="experience-company">AutumnLeaf IT</div>
@@ -348,7 +346,7 @@ function App() {
                 <li>• Configured and maintained enterprise-level networks and servers</li>
                 <li>• Managed software updates, security patches, and data backups</li>
                 <li>• Led troubleshooting efforts for network and hardware issues</li>
-              </div>
+              </ul>
             </div>
           </div>
         </div>
@@ -492,83 +490,6 @@ function App() {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* Contact Section */}
-      <motion.section
-        id="contact"
-        className="section scroll-section"
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <div className="section-content">
-          <div className="section-left">
-            <motion.h2 className="section-title" variants={itemVariants}>
-              <Mail size={24} className="title-icon" />
-              CONTACT
-            </motion.h2>
-          </div>
-          <div className="section-right">
-            <motion.div className="contact-content" variants={itemVariants}>
-              <motion.p variants={itemVariants}>Ready to collaborate? Let's discuss your next project.</motion.p>
-              <motion.div className="contact-links" variants={itemVariants}>
-                <motion.a 
-                  href="mailto:onamemba@gmail.com" 
-                  className="contact-link"
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05, x: 10 }}
-                >
-                  <Mail size={16} /> onamemba@gmail.com
-                </motion.a>
-                <motion.a 
-                  href="https://linkedin.com/in/francistumba" 
-                  className="contact-link"
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05, x: 10 }}
-                >
-                  <Linkedin size={16} /> LinkedIn
-                </motion.a>
-                <motion.a 
-                  href="https://github.com/francistumba" 
-                  className="contact-link"
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05, x: 10 }}
-                >
-                  <Github size={16} /> GitHub
-                </motion.a>
-              </motion.div>
-            </motion.div>
-          </div>
-        </div>
-      </motion.section>
-    </motion.div>
-  );
-}
-
-export default App;
-                <div className="certification-name">AWS Certified Machine Learning – Specialty</div>
-              </motion.div>
-              
-              <motion.div className="certification-item" variants={itemVariants}>
-                <div className="certification-name">AWS Certified Data Analytics – Specialty</div>
-              </motion.div>
-              
-              <motion.div className="certification-item" variants={itemVariants}>
-                <div className="certification-name">AWS Certified DevOps Engineer – Professional</div>
-              </motion.div>
-
-              <motion.div className="certification-item" variants={itemVariants}>
-                <div className="certification-name">Snowflake SnowPro Core Certification</div>
-              </motion.div>
-
-              <motion.div className="certification-item" variants={itemVariants}>
-                <div className="certification-name">Python Institute Certification (PCAP)</div>
-              </motion.div>
             </motion.div>
           </div>
         </div>
