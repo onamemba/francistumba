@@ -256,34 +256,34 @@ function App() {
           <div className="section-right">
             <motion.div className="skills-content" variants={itemVariants}>
               <ul className="skills-list">
-                <motion.li variants={itemVariants}>
+                <li>
                   <div className="skill-header">
                     <Cloud size={16} />
                     <strong style={{ color: 'white' }}>Cloud Systems & Growth</strong>
                   </div>
                   <p>Expert in setting up cloud systems that keep your website, app or store fast and reliable. I lower costs and help your business grow without tech headaches.</p>
-                </motion.li>
-                <motion.li variants={itemVariants}>
+                </li>
+                <li>
                   <div className="skill-header">
                     <Code size={16} />
                     <strong style={{ color: 'white' }}>Software Development & Design</strong>
                   </div>
                   <p>Build beautiful, high-performance websites, mobile apps and custom tools. From sleek user interfaces to rock-solid code, I create products people love to use.</p>
-                </motion.li>
-                <motion.li variants={itemVariants}>
+                </li>
+                <li>
                   <div className="skill-header">
                     <Zap size={16} />
                     <strong style={{ color: 'white' }}>Data, AI & Smart Automation</strong>
                   </div>
                   <p>I use AI to design smarter systems from the start. I generate clean data flows, predict project risks and automate workflows so every solution launches faster, runs smoother and delivers real business results from day one.</p>
-                </motion.li>
-                <motion.li variants={itemVariants}>
+                </li>
+                <li>
                   <div className="skill-header">
                     <User size={16} />
                     <strong style={{ color: 'white' }}>Project Leadership</strong>
                   </div>
                   <p>Strong at leading tech projects from start to success. I manage teams, timelines and budgets to deliver real results on time every time.</p>
-                </motion.li>
+                </li>
               </ul>
             </motion.div>
           </div>
