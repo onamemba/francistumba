@@ -268,6 +268,13 @@ function App() {
                 </li>
                 <li>
                   <div className="skill-header">
+                    <Code size={16} />
+                    <strong style={{ color: 'white' }}>Software Development & Design</strong>
+                  </div>
+                  <p>Build beautiful, high-performance websites, mobile apps and custom tools. From sleek user interfaces to rock-solid code, I create products people love to use.</p>
+                </li>
+                <li>
+                  <div className="skill-header">
                     <Database size={16} />
                     <strong style={{ color: 'white' }}>Data & Clear Insights</strong>
                   </div>
