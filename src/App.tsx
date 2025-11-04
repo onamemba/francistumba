@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowUpRight, Download, ExternalLink, Linkedin, Github, Code, Terminal, Database, Cloud, Cpu, Globe, Zap, Monitor, Mail, User } from 'lucide-react';
-import Engineering3D from './components/Engineering3D';
 import './App.css';
 
 function App() {
