@@ -13,6 +13,7 @@
   object-position: center 25%;
   display: block;
   transform: scale(2.0);
+}
 
 /* Hero Section Mobile - Tighter spacing */
 @media (max-width: 768px) {
