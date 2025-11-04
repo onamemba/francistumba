@@ -284,7 +284,7 @@ function App() {
                   </div>
                   <p>Strong at leading tech projects from start to success. I manage teams, timelines and budgets to deliver real results on time every time.</p>
                 </motion.li>
-              </motion.ul>
+              </ul>
             </motion.div>
           </div>
         </div>
