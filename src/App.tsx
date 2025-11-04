@@ -255,7 +255,7 @@ function App() {
           </div>
           <div className="section-right">
             <motion.div className="skills-content" variants={itemVariants}>
-              <motion.ul className="skills-list" variants={itemVariants}>
+              <ul className="skills-list">
                 <motion.li variants={itemVariants}>
                   <div className="skill-header">
                     <Cloud size={16} />
