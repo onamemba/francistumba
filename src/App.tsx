@@ -265,7 +265,7 @@ function App() {
                 </motion.li>
                 <motion.li variants={itemVariants}>
                   <div className="skill-header">
-                    <Code size={16} />
+                    <User size={16} />
                     <strong style={{ color: 'white' }}>Project Leadership</strong>
                   </div>
                   <p>Strong at leading tech projects from start to success. I manage teams, timelines and budgets to deliver real results on time every time.</p>
