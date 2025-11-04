@@ -259,30 +259,37 @@ function App() {
                 <motion.li variants={itemVariants}>
                   <div className="skill-header">
                     <Code size={16} />
-                    <strong>Coding & Software Development</strong>
+                    <strong style={{ color: 'white' }}>Project Leadership</strong>
                   </div>
-                  <p>Proficient in Python, JavaScript, SQL, React, and TypeScript. Experienced in end-to-end software and API development.</p>
-                </motion.li>
-                <motion.li variants={itemVariants}>
-                  <div className="skill-header">
-                    <Database size={16} />
-                    <strong>Design & Architecture</strong>
-                  </div>
-                  <p>Skilled in building scalable data pipelines, microservices, and cloud infrastructures using AWS and Snowflake.</p>
+                  <p>Strong at leading tech projects from start to success. I manage teams, timelines and budgets to deliver real results on time every time.</p>
                 </motion.li>
                 <motion.li variants={itemVariants}>
                   <div className="skill-header">
                     <Cloud size={16} />
-                    <strong>Automation & DevOps</strong>
+                    <strong style={{ color: 'white' }}>Cloud Systems & Growth</strong>
                   </div>
-                  <p>Experienced in CI/CD pipelines, Docker, Terraform, and workflow automation.</p>
+                  <p>Expert in setting up cloud systems that keep your website, app or store fast and reliable. I lower costs and help your business grow without tech headaches.</p>
+                </motion.li>
+                <motion.li variants={itemVariants}>
+                  <div className="skill-header">
+                    <Database size={16} />
+                    <strong style={{ color: 'white' }}>Data & Clear Insights</strong>
+                  </div>
+                  <p>Adept at turning numbers into simple visual reports. I organize your sales and customer data so you can spot opportunities and make strong decisions.</p>
+                </motion.li>
+                <motion.li variants={itemVariants}>
+                  <div className="skill-header">
+                    <Zap size={16} />
+                    <strong style={{ color: 'white' }}>AI & Smart Automation</strong>
+                  </div>
+                  <p>Proficient in adding AI to your tools like instant chat support, sales predictions and self-improving workflows that work smarter every day.</p>
                 </motion.li>
                 <motion.li variants={itemVariants}>
                   <div className="skill-header">
                     <Monitor size={16} />
-                    <strong>Data & Analytics</strong>
+                    <strong style={{ color: 'white' }}>Smart IT Planning</strong>
                   </div>
-                  <p>Expert in data warehousing, ETL processes, and building data-driven systems for business intelligence.</p>
+                  <p>Skilled at choosing and building the right tools to meet your goals. I create online platforms and systems that save time and increase profits.</p>
                 </motion.li>
               </ul>
             </motion.div>
