@@ -256,35 +256,35 @@ function App() {
           <div className="section-right">
             <motion.div className="skills-content" variants={itemVariants}>
               <ul className="skills-list">
-                <li>
+                <motion.li variants={itemVariants}>
                   <div className="skill-header">
                     <Cloud size={16} />
                     <strong style={{ color: 'white' }}>Cloud Systems & Growth</strong>
                   </div>
                   <p>Expert in setting up cloud systems that keep your website, app or store fast and reliable. I lower costs and help your business grow without tech headaches.</p>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li variants={itemVariants}>
                   <div className="skill-header">
                     <Code size={16} />
                     <strong style={{ color: 'white' }}>Software Development & Design</strong>
                   </div>
                   <p>Build beautiful, high-performance websites, mobile apps and custom tools. From sleek user interfaces to rock-solid code, I create products people love to use.</p>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li variants={itemVariants}>
                   <div className="skill-header">
                     <Zap size={16} />
                     <strong style={{ color: 'white' }}>Data, AI & Smart Automation</strong>
                   </div>
                   <p>I use AI to design smarter systems from the start. I generate clean data flows, predict project risks and automate workflows so every solution launches faster, runs smoother and delivers real business results from day one.</p>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li variants={itemVariants}>
                   <div className="skill-header">
                     <User size={16} />
                     <strong style={{ color: 'white' }}>Project Leadership</strong>
                   </div>
                   <p>Strong at leading tech projects from start to success. I manage teams, timelines and budgets to deliver real results on time every time.</p>
-                </li>
-              </ul>
+                </motion.li>
+              </motion.ul>
             </motion.div>
           </div>
         </div>
@@ -309,56 +309,54 @@ function App() {
             </motion.h2>
           </div>
           <div className="section-right">
-            <motion.div className="experience-content" variants={itemVariants}>
-              <motion.div className="experience-item" variants={itemVariants}>
-                <div className="experience-header">
-                  <div className="experience-company">Shoprite Holdings</div>
-                  <div className="experience-period">2021 - 2024</div>
-                </div>
-                <div className="experience-role"><Database size={16} style={{color: '#3b82f6'}} /> Senior Data Engineer</div>
-                <ul className="experience-details">
-                  <li>• Designed and managed ETL pipelines processing 10TB+ of data daily using AWS and Snowflake</li>
-                  <li>• Optimized data warehouses and automated reporting, reducing manual work by 80%</li>
-                  <li>• Built real-time analytics dashboards that improved business decision-making speed by 50%</li>
-                  <li>• Led data architecture initiatives and mentored junior engineers on best practices</li>
-                </ul>
-              </motion.div>
-              
-              <motion.div className="experience-item" variants={itemVariants}>
-                <div className="experience-header">
-                  <div className="experience-company">AutumnLeaf IT</div>
-                  <div className="experience-period">2019 - 2021</div>
-                </div>
-                <div className="experience-role"><Cloud size={16} style={{color: '#3b82f6'}} /> DevOps Engineer</div>
-                <ul className="experience-details">
-                  <li>• Improved CI/CD pipelines and automated deployments, reducing deployment time by 60%</li>
-                  <li>• Managed infrastructure using AWS CloudFormation and Docker, supporting 500+ daily transactions</li>
-                  <li>• Implemented monitoring and alerting systems that improved system reliability by 35%</li>
-                  <li>• Collaborated with development teams to optimize application performance and scalability</li>
-                </ul>
-              </motion.div>
-              
-              <motion.div className="experience-item" variants={itemVariants}>
-                <div className="experience-header">
-                  <div className="experience-company">AutumnLeaf IT</div>
-                  <div className="experience-period">2018 - 2019</div>
-                </div>
-                <div className="experience-role"><Globe size={16} style={{color: '#3b82f6'}} /> IT Technician</div>
-                <ul className="experience-details">
-                  <li>• Provided IT support for corporate clients, ensuring minimal downtime</li>
-                  <li>• Configured and maintained enterprise-level networks and servers</li>
-                  <li>• Managed software updates, security patches, and data backups</li>
-                  <li>• Led troubleshooting efforts for network and hardware issues</li>
-                </ul>
-              </motion.div>
+            <motion.div className="experience-item" variants={itemVariants}>
+              <div className="experience-header">
+                <div className="experience-company">Double Tap</div>
+                <div className="experience-period">2024 - 2025</div>
+              </div>
+              <div className="experience-role">IT Technician /</div>
+              <ul className="experience-details">
+                <motion.li variants={itemVariants}>• Managed and maintained IT infrastructure for a high-traffic gaming venue with 99.9% uptime</motion.li>
+                <motion.li variants={itemVariants}>• Provided technical support and troubleshooting for both software and hardware issues, reducing downtime by 40%</motion.li>
+                <motion.li variants={itemVariants}>• Implemented security protocols and automated backup systems to ensure data protection and privacy</motion.li>
+                <motion.li variants={itemVariants}>• Optimized network performance and managed system backups using cloud-based solutions</motion.li>
+              </ul>
+            </motion.div>
+
+            <motion.div className="experience-item" variants={itemVariants}>
+              <div className="experience-header">
+                <div className="experience-company">Shoprite Holdings</div>
+                <div className="experience-period">2021 - 2024</div>
+              </div>
+              <div className="experience-role">Senior Data Engineer /</div>
+              <ul className="experience-details">
+                <motion.li variants={itemVariants}>• Designed and managed ETL pipelines processing 10TB+ of data daily using AWS and Snowflake</motion.li>
+                <motion.li variants={itemVariants}>• Optimized data warehouses and automated reporting, reducing manual work by 80%</motion.li>
+                <motion.li variants={itemVariants}>• Built real-time analytics dashboards that improved business decision-making speed by 50%</motion.li>
+                <motion.li variants={itemVariants}>• Led data architecture initiatives and mentored junior engineers on best practices</motion.li>
+              </ul>
+            </motion.div>
+
+            <motion.div className="experience-item" variants={itemVariants}>
+              <div className="experience-header">
+                <div className="experience-company">AutumnLeaf IT Solutions</div>
+                <div className="experience-period">2019 - 2021</div>
+              </div>
+              <div className="experience-role">DevOps Engineer /</div>
+              <ul className="experience-details">
+                <motion.li variants={itemVariants}>• Improved CI/CD pipelines and automated deployments, reducing deployment time by 60%</motion.li>
+                <motion.li variants={itemVariants}>• Managed infrastructure using AWS CloudFormation and Docker, supporting 500+ daily transactions</motion.li>
+                <motion.li variants={itemVariants}>• Implemented monitoring and alerting systems that improved system reliability by 35%</motion.li>
+                <motion.li variants={itemVariants}>• Collaborated with development teams to optimize application performance and scalability</motion.li>
+              </ul>
             </motion.div>
           </div>
         </div>
       </motion.section>
 
-      {/* Projects Section */}
+      {/* Education Section */}
       <motion.section
-        id="projects"
+        id="education"
         className="section scroll-section"
         variants={sectionVariants}
         initial="hidden"
@@ -368,111 +366,116 @@ function App() {
         <div className="section-content">
           <div className="section-left">
             <motion.h2 className="section-title" variants={itemVariants}>
-              <Monitor size={24} className="title-icon" />
-              PROJECTS
+              <Code size={24} className="title-icon" />
+              EDUCATION
             </motion.h2>
           </div>
           <div className="section-right">
-            <motion.div className="projects-grid" variants={itemVariants}>
-              <motion.div className="project-card" variants={itemVariants}>
-                <div className="project-header">
-                  <h3 className="project-title">Re-Col-Let</h3>
-                  <div className="project-tech">React • TypeScript • AI/ML</div>
-                </div>
-                <p className="project-description">
-                  AI-powered speech recording and summarization tool that captures ideas hands-free and converts them into organized notes.
-                </p>
-                <div className="project-links">
-                  <a href="https://lecture-summarizer-web-ai.vercel.app/" className="project-link">
-                    <ExternalLink size={16} /> Live Demo
-                  </a>
-                </div>
+            <motion.div className="education-content" variants={itemVariants}>
+              <motion.div className="education-item" variants={itemVariants}>
+                <h3 className="education-degree">Master of Science in Data Science & Quantitative Analysis</h3>
+                <p className="education-school">WorldQuant University / Graduated: 2024</p>
               </motion.div>
-
-              <motion.div className="project-card" variants={itemVariants}>
-                <div className="project-header">
-                  <h3 className="project-title">Social Media Manager</h3>
-                  <div className="project-tech">Vue.js • Express • PostgreSQL</div>
-                </div>
-                <p className="project-description">
-                  Comprehensive dashboard for managing multiple social media accounts with post scheduling and analytics tracking.
-                </p>
-                <div className="project-links">
-                  <a href="https://startling-starship-8b7b9c.netlify.app/" className="project-link">
-                    <ExternalLink size={16} /> Live Demo
-                  </a>
-                </div>
+              <motion.div className="education-item" variants={itemVariants}>
+                <h3 className="education-degree">Bachelor of Technology in Information Technology</h3>
+                <p className="education-school">Cape Peninsula University of Technology / Graduated: 2019</p>
               </motion.div>
             </motion.div>
           </div>
         </div>
       </motion.section>
 
-      {/* Education & Certifications Section */}
-      <section
-        id="education"
+      {/* Certifications Section */}
+      <motion.section
+        id="certifications"
         className="section scroll-section"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
       >
         <div className="section-content">
           <div className="section-left">
-            <h2 className="section-title">
-              <Code size={24} className="title-icon" />
-              EDUCATION &
-              <br />
+            <motion.h2 className="section-title" variants={itemVariants}>
+              <Cloud size={24} className="title-icon" />
               CERTIFICATIONS
-            </h2>
+            </motion.h2>
           </div>
           <div className="section-right">
-            <div className="education-content">
-              <div className="education-section">
-                <h3 className="section-subtitle">Education</h3>
-                <div className="education-grid">
-                  <div className="education-item">
-                    <h4 className="education-degree">Master of Science in Data Science & Quantitative Analysis</h4>
-                    <p className="education-school">WorldQuant University</p>
-                    <p className="education-year">Graduated: 2024</p>
-                  </div>
-                  <div className="education-item">
-                    <h4 className="education-degree">Bachelor of Technology in Information Technology</h4>
-                    <p className="education-school">Cape Peninsula University of Technology</p>
-                    <p className="education-year">Graduated: 2019</p>
-                  </div>
-                </div>
-              </div>
+            <motion.div className="certifications-list" variants={itemVariants}>
+              <motion.div className="certification-item" variants={itemVariants}>
+                <div className="certification-name">AWS Certified Machine Learning – Specialty</div>
+              </motion.div>
+              
+              <motion.div className="certification-item" variants={itemVariants}>
+                <div className="certification-name">AWS Certified Data Analytics – Specialty</div>
+              </motion.div>
+              
+              <motion.div className="certification-item" variants={itemVariants}>
+                <div className="certification-name">AWS Certified DevOps Engineer – Professional</div>
+              </motion.div>
 
-              <div className="certifications-section">
-                <h3 className="section-subtitle">Professional Certifications</h3>
-                <div className="certifications-grid">
-                  <div className="certification-item">
-                    <div className="certification-badge">AWS</div>
-                    <div className="certification-name">Machine Learning – Specialty</div>
-                  </div>
-                  
-                  <div className="certification-item">
-                    <div className="certification-badge">AWS</div>
-                    <div className="certification-name">Data Analytics – Specialty</div>
-                  </div>
-                  
-                  <div className="certification-item">
-                    <div className="certification-badge">AWS</div>
-                    <div className="certification-name">DevOps Engineer – Professional</div>
-                  </div>
+              <motion.div className="certification-item" variants={itemVariants}>
+                <div className="certification-name">Snowflake SnowPro Core Certification</div>
+              </motion.div>
 
-                  <div className="certification-item">
-                    <div className="certification-badge">Snowflake</div>
-                    <div className="certification-name">SnowPro Core Certification</div>
-                  </div>
-
-                  <div className="certification-item">
-                    <div className="certification-badge">Python</div>
-                    <div className="certification-name">PCAP Certification</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+              <motion.div className="certification-item" variants={itemVariants}>
+                <div className="certification-name">Python Institute Certification (PCAP)</div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
+
+      {/* Contact Section */}
+      <motion.section
+        id="contact"
+        className="section scroll-section"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <div className="section-content">
+          <div className="section-left">
+            <motion.h2 className="section-title" variants={itemVariants}>
+              <Mail size={24} className="title-icon" />
+              CONTACT
+            </motion.h2>
+          </div>
+          <div className="section-right">
+            <motion.div className="contact-content" variants={itemVariants}>
+              <motion.p variants={itemVariants}>Ready to collaborate? Let's discuss your next project.</motion.p>
+              <motion.div className="contact-links" variants={itemVariants}>
+                <motion.a 
+                  href="mailto:onamemba@gmail.com" 
+                  className="contact-link"
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.05, x: 10 }}
+                >
+                  <Mail size={16} /> onamemba@gmail.com
+                </motion.a>
+                <motion.a 
+                  href="https://linkedin.com/in/francistumba" 
+                  className="contact-link"
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.05, x: 10 }}
+                >
+                  <Linkedin size={16} /> LinkedIn
+                </motion.a>
+                <motion.a 
+                  href="https://github.com/francistumba" 
+                  className="contact-link"
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.05, x: 10 }}
+                >
+                  <Github size={16} /> GitHub
+                </motion.a>
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </motion.section>
     </motion.div>
   );
 }
