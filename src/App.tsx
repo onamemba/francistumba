@@ -309,47 +309,61 @@ function App() {
             </motion.h2>
           </div>
           <div className="section-right">
-            <motion.div className="experience-item" variants={itemVariants}>
+            <div className="experience-item">
               <div className="experience-header">
                 <div className="experience-company">Double Tap</div>
                 <div className="experience-period">2024 - 2025</div>
               </div>
-              <div className="experience-role">IT Technician /</div>
+              <div className="experience-role"><Monitor size={16} /> IT Technician /</div>
               <ul className="experience-details">
-                <motion.li variants={itemVariants}>• Managed and maintained IT infrastructure for a high-traffic gaming venue with 99.9% uptime</motion.li>
-                <motion.li variants={itemVariants}>• Provided technical support and troubleshooting for both software and hardware issues, reducing downtime by 40%</motion.li>
-                <motion.li variants={itemVariants}>• Implemented security protocols and automated backup systems to ensure data protection and privacy</motion.li>
-                <motion.li variants={itemVariants}>• Optimized network performance and managed system backups using cloud-based solutions</motion.li>
+                <li>• Managed and maintained IT infrastructure for a high-traffic gaming venue with 99.9% uptime</li>
+                <li>• Provided technical support and troubleshooting for both software and hardware issues, reducing downtime by 40%</li>
+                <li>• Implemented security protocols and automated backup systems to ensure data protection and privacy</li>
+                <li>• Optimized network performance and managed system backups using cloud-based solutions</li>
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div className="experience-item" variants={itemVariants}>
+            <div className="experience-item">
               <div className="experience-header">
                 <div className="experience-company">Shoprite Holdings</div>
                 <div className="experience-period">2021 - 2024</div>
               </div>
-              <div className="experience-role">Senior Data Engineer /</div>
+              <div className="experience-role"><Database size={16} /> Senior Data Engineer /</div>
               <ul className="experience-details">
-                <motion.li variants={itemVariants}>• Designed and managed ETL pipelines processing 10TB+ of data daily using AWS and Snowflake</motion.li>
-                <motion.li variants={itemVariants}>• Optimized data warehouses and automated reporting, reducing manual work by 80%</motion.li>
-                <motion.li variants={itemVariants}>• Built real-time analytics dashboards that improved business decision-making speed by 50%</motion.li>
-                <motion.li variants={itemVariants}>• Led data architecture initiatives and mentored junior engineers on best practices</motion.li>
+                <li>• Designed and managed ETL pipelines processing 10TB+ of data daily using AWS and Snowflake</li>
+                <li>• Optimized data warehouses and automated reporting, reducing manual work by 80%</li>
+                <li>• Built real-time analytics dashboards that improved business decision-making speed by 50%</li>
+                <li>• Led data architecture initiatives and mentored junior engineers on best practices</li>
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div className="experience-item" variants={itemVariants}>
+            <div className="experience-item">
               <div className="experience-header">
-                <div className="experience-company">AutumnLeaf IT Solutions</div>
+                <div className="experience-company">AutumnLeaf IT</div>
                 <div className="experience-period">2019 - 2021</div>
               </div>
-              <div className="experience-role">DevOps Engineer /</div>
+              <div className="experience-role"><Cloud size={16} /> DevOps Engineer /</div>
               <ul className="experience-details">
-                <motion.li variants={itemVariants}>• Improved CI/CD pipelines and automated deployments, reducing deployment time by 60%</motion.li>
-                <motion.li variants={itemVariants}>• Managed infrastructure using AWS CloudFormation and Docker, supporting 500+ daily transactions</motion.li>
-                <motion.li variants={itemVariants}>• Implemented monitoring and alerting systems that improved system reliability by 35%</motion.li>
-                <motion.li variants={itemVariants}>• Collaborated with development teams to optimize application performance and scalability</motion.li>
+                <li>• Improved CI/CD pipelines and automated deployments, reducing deployment time by 60%</li>
+                <li>• Managed infrastructure using AWS CloudFormation and Docker, supporting 500+ daily transactions</li>
+                <li>• Implemented monitoring and alerting systems that improved system reliability by 35%</li>
+                <li>• Collaborated with development teams to optimize application performance and scalability</li>
               </ul>
-            </motion.div>
+            </div>
+
+            <div className="experience-item">
+              <div className="experience-header">
+                <div className="experience-company">AutumnLeaf IT</div>
+                <div className="experience-period">2018 - 2019</div>
+              </div>
+              <div className="experience-role"><Monitor size={16} /> IT Technician /</div>
+              <ul className="experience-details">
+                <li>• Provided IT support for corporate clients, ensuring minimal downtime</li>
+                <li>• Configured and maintained enterprise-level networks and servers</li>
+                <li>• Managed software updates, security patches, and data backups</li>
+                <li>• Led troubleshooting efforts for network and hardware issues</li>
+              </ul>
+            </div>
           </div>
         </div>
       </motion.section>
