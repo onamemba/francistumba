@@ -291,22 +291,18 @@ function App() {
       </motion.section>
 
       {/* Work Experience Section */}
-      <motion.section
+      <section
         id="experience"
         className="section scroll-section"
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
       >
         <div className="section-content">
           <div className="section-left">
-            <motion.h2 className="section-title" variants={itemVariants}>
+            <h2 className="section-title">
               <Terminal size={24} className="title-icon" />
               WORK
               <br />
               EXPERIENCE
-            </motion.h2>
+            </h2>
           </div>
           <div className="section-right">
             <div className="experience-content">
@@ -350,27 +346,23 @@ function App() {
             </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Projects Section */}
-      <motion.section
+      <section
         id="projects"
         className="section scroll-section"
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
       >
         <div className="section-content">
           <div className="section-left">
-            <motion.h2 className="section-title" variants={itemVariants}>
+            <h2 className="section-title">
               <Monitor size={24} className="title-icon" />
               PROJECTS
-            </motion.h2>
+            </h2>
           </div>
           <div className="section-right">
-            <motion.div className="projects-grid" variants={itemVariants}>
-              <motion.div className="project-card" variants={itemVariants}>
+            <div className="projects-grid">
+              <div className="project-card">
                 <div className="project-header">
                   <h3 className="project-title">Re-Col-Let</h3>
                   <div className="project-tech">React • TypeScript • AI/ML</div>
@@ -383,9 +375,9 @@ function App() {
                     <ExternalLink size={16} /> Live Demo
                   </a>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div className="project-card" variants={itemVariants}>
+              <div className="project-card">
                 <div className="project-header">
                   <h3 className="project-title">Book Store Platform</h3>
                   <div className="project-tech">React • Node.js • MongoDB</div>
@@ -398,9 +390,9 @@ function App() {
                     <ExternalLink size={16} /> Live Demo
                   </a>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div className="project-card" variants={itemVariants}>
+              <div className="project-card">
                 <div className="project-header">
                   <h3 className="project-title">Social Media Manager</h3>
                   <div className="project-tech">Vue.js • Express • PostgreSQL</div>
@@ -413,9 +405,9 @@ function App() {
                     <ExternalLink size={16} /> Live Demo
                   </a>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div className="project-card" variants={itemVariants}>
+              <div className="project-card">
                 <div className="project-header">
                   <h3 className="project-title">PianoEar</h3>
                   <div className="project-tech">JavaScript • Web Audio API</div>
@@ -428,42 +420,38 @@ function App() {
                     <ExternalLink size={16} /> Live Demo
                   </a>
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Education & Certifications Section */}
-      <motion.section
+      <section
         id="education"
         className="section scroll-section"
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
       >
         <div className="section-content">
           <div className="section-left">
-            <motion.h2 className="section-title" variants={itemVariants}>
+            <h2 className="section-title">
               <Code size={24} className="title-icon" />
               EDUCATION &
               <br />
               CERTIFICATIONS
-            </motion.h2>
+            </h2>
           </div>
           <div className="section-right">
-            <motion.div className="education-content" variants={itemVariants}>
+            <div className="education-content">
               <div className="education-section">
                 <h3 className="section-subtitle">Education</h3>
-                <motion.div className="education-item" variants={itemVariants}>
+                <div className="education-item">
                   <h4 className="education-degree">Master of Science in Data Science & Quantitative Analysis</h4>
                   <p className="education-school">WorldQuant University / Graduated: 2024</p>
-                </motion.div>
-                <motion.div className="education-item" variants={itemVariants}>
+                </div>
+                <div className="education-item">
                   <h4 className="education-degree">Bachelor of Technology in Information Technology</h4>
                   <p className="education-school">Cape Peninsula University of Technology / Graduated: 2019</p>
-                </motion.div>
+                </div>
               </div>
 
               <div className="certifications-section">
@@ -490,60 +478,50 @@ function App() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Contact Section */}
-      <motion.section
+      <section
         id="contact"
         className="section scroll-section"
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
       >
         <div className="section-content">
           <div className="section-left">
-            <motion.h2 className="section-title" variants={itemVariants}>
+            <h2 className="section-title">
               <Mail size={24} className="title-icon" />
               CONTACT
-            </motion.h2>
+            </h2>
           </div>
           <div className="section-right">
-            <motion.div className="contact-content" variants={itemVariants}>
-              <motion.p variants={itemVariants}>Ready to collaborate? Let's discuss your next project.</motion.p>
-              <motion.div className="contact-links" variants={itemVariants}>
-                <motion.a 
+            <div className="contact-content">
+              <p>Ready to collaborate? Let's discuss your next project.</p>
+              <div className="contact-links">
+                <a 
                   href="mailto:onamemba@gmail.com" 
                   className="contact-link"
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05, x: 10 }}
                 >
                   <Mail size={16} /> onamemba@gmail.com
-                </motion.a>
-                <motion.a 
+                </a>
+                <a 
                   href="https://linkedin.com/in/francistumba" 
                   className="contact-link"
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05, x: 10 }}
                 >
                   <Linkedin size={16} /> LinkedIn
-                </motion.a>
-                <motion.a 
+                </a>
+                <a 
                   href="https://github.com/francistumba" 
                   className="contact-link"
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05, x: 10 }}
                 >
                   <Github size={16} /> GitHub
-                </motion.a>
-              </motion.div>
-            </motion.div>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </motion.section>
+      </section>
     </motion.div>
   );
 }
