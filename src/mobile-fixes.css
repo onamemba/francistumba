@@ -10,7 +10,7 @@
 
 .hero-image img {
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 40%;
   display: block;
   transform: scale(1.0);
 }
