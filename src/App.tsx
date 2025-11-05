@@ -592,22 +592,6 @@ const itemVariants = {
       </motion.div>
     </div>
 
-    {/* RIGHT: 3D Model */}
-    <div className="contact-right">
-      <motion.div
-        className="model-container"
-        variants={itemVariants}
-      >
-        <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[10, 10, 5]} intensity={1} />
-          <OrbitControls enableZoom={false} autoRotate={false} />
-          <Suspense fallback={null}>
-            <GLBModel url="/models/rob_is_on_the_phone.glb" />
-          </Suspense>
-        </Canvas>
-      </motion.div>
-    </div>
   </div>
 </motion.section>
     </motion.div>
