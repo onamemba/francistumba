@@ -33,8 +33,8 @@ function GLBModel({ url }: { url: string }) {
     <primitive
       ref={ref}
       object={scene}
-      scale={3.8}
-      position={[0, -1.3, 0]}
+      scale={0.05}
+      position={[0, -10, 0]}
     />
   );
 }
