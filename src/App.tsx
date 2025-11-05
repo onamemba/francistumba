@@ -519,54 +519,59 @@ const itemVariants = {
 </motion.section>
 
       {/* Contact Section */}
-      <section
-        id="contact"
-        className="section scroll-section"
+      <motion.section
+  id="contact"
+  className="section scroll-section"
+  variants={sectionVariants}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.3 }}
+>
+  <div className="section-content contact-section-content">
+    {/* LEFT: Title + Text + Links */}
+    <div className="section-left">
+      <motion.h2 className="section-title" variants={itemVariants}>
+        <Mail size={24} className="title-icon" />
+        CONTACT
+      </motion.h2>
+
+      <motion.div className="contact-content" variants={itemVariants}>
+        <motion.p variants={itemVariants} className="text-center md:text-left">
+          Ready to collaborate? Let's discuss your next project.
+        </motion.p>
+
+        <motion.div variants={itemVariants} className="contact-links">
+          <a href="mailto:onamemba@gmail.com" className="contact-link">
+            <Mail size={16} /> onamemba@gmail.com
+          </a>
+          <a href="https://linkedin.com/in/francistumba" className="contact-link">
+            <Linkedin size={16} /> LinkedIn
+          </a>
+          <a href="https://github.com/francistumba" className="contact-link">
+            <Github size={16} /> GitHub
+          </a>
+        </motion.div>
+      </motion.div>
+    </div>
+
+    {/* RIGHT: 3D Model (GLB) */}
+    <div className="section-right">
+      <motion.div
+        className="w-full h-96 md:h-full"
+        variants={itemVariants}
       >
-        <div className="section-content contact-section-content">
-          <div className="section-left">
-            <h2 className="section-title">
-              <Mail size={24} className="title-icon" />
-              CONTACT
-            </h2>
-            <div className="contact-content">
-              <p>Ready to collaborate? Let's discuss your next project.</p>
-              <div className="contact-links">
-                <a
-                  href="mailto:onamemba@gmail.com"
-                  className="contact-link"
-                >
-                  <Mail size={16} /> onamemba@gmail.com
-                </a>
-                <a
-                  href="https://linkedin.com/in/francistumba"
-                  className="contact-link"
-                >
-                  <Linkedin size={16} /> LinkedIn
-                </a>
-                <a
-                  href="https://github.com/francistumba"
-                  className="contact-link"
-                >
-                  <Github size={16} /> GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="section-right">
-            <div className="sketchfab-embed-wrapper">
-              <iframe
-                title="Bevel Gears"
-                frameBorder="0"
-                allowFullScreen
-                allow="autoplay; fullscreen; xr-spatial-tracking"
-                src="https://sketchfab.com/models/c2895a2ac493424bac4656af74b644dd/embed"
-                className="sketchfab-iframe"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
+        <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
+          <ambientLight intensity={0.5} />
+          <directionalLight position={[10, 10, 5]} intensity={1} />
+          <OrbitControls enableZoom={false} autoRotate />
+          <Suspense fallback={<div className="text-white">Loading 3D...</div>}>
+            <GLBModel url="/models/your-model.glb" />
+          </Suspense>
+        </Canvas>
+      </motion.div>
+    </div>
+  </div>
+</motion.section>
     </motion.div>
   );
 }
