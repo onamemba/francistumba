@@ -534,51 +534,51 @@ const itemVariants = {
   whileInView="visible"
   viewport={{ once: true, amount: 0.3 }}
 >
-  <div className="contact-wrapper">
-    {/* Title at top left */}
-    <motion.h2 className="contact-title" variants={itemVariants}>
-      <Mail size={24} className="title-icon" />
-      CONTACT
-    </motion.h2>
+  <div className="contact-grid">
+    {/* LEFT: Title */}
+    <div className="contact-left">
+      <motion.h2 className="section-title" variants={itemVariants}>
+        <Mail size={24} className="title-icon" />
+        CONTACT
+      </motion.h2>
+    </div>
 
-    <div className="contact-grid">
-      {/* CENTER: Text + Links */}
-      <div className="contact-center">
-        <motion.div className="contact-content" variants={itemVariants}>
-          <motion.p variants={itemVariants}>
-            Ready to collaborate? Let's discuss your next project.
-          </motion.p>
+    {/* CENTER: Text + Links */}
+    <div className="contact-center">
+      <motion.div className="contact-content" variants={itemVariants}>
+        <motion.p variants={itemVariants}>
+          Ready to collaborate? Let's discuss your next project.
+        </motion.p>
 
-          <motion.div variants={itemVariants} className="contact-links">
-            <a href="mailto:onamemba@gmail.com" className="contact-link">
-              <Mail size={16} /> onamemba@gmail.com
-            </a>
-            <a href="https://linkedin.com/in/francistumba" className="contact-link">
-              <Linkedin size={16} /> LinkedIn
-            </a>
-            <a href="https://github.com/francistumba" className="contact-link">
-              <Github size={16} /> GitHub
-            </a>
-          </motion.div>
+        <motion.div variants={itemVariants} className="contact-links">
+          <a href="mailto:onamemba@gmail.com" className="contact-link">
+            <Mail size={16} /> onamemba@gmail.com
+          </a>
+          <a href="https://linkedin.com/in/francistumba" className="contact-link">
+            <Linkedin size={16} /> LinkedIn
+          </a>
+          <a href="https://github.com/francistumba" className="contact-link">
+            <Github size={16} /> GitHub
+          </a>
         </motion.div>
-      </div>
+      </motion.div>
+    </div>
 
-      {/* RIGHT: 3D Model */}
-      <div className="contact-right">
-        <motion.div
-          className="model-container"
-          variants={itemVariants}
-        >
-          <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
-            <ambientLight intensity={0.5} />
-            <directionalLight position={[10, 10, 5]} intensity={1} />
-            <OrbitControls enableZoom={false} autoRotate />
-            <Suspense fallback={null}>
-              <GLBModel url="/models/bevel_gears.glb" />
-            </Suspense>
-          </Canvas>
-        </motion.div>
-      </div>
+    {/* RIGHT: 3D Model */}
+    <div className="contact-right">
+      <motion.div
+        className="model-container"
+        variants={itemVariants}
+      >
+        <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
+          <ambientLight intensity={0.5} />
+          <directionalLight position={[10, 10, 5]} intensity={1} />
+          <OrbitControls enableZoom={false} autoRotate />
+          <Suspense fallback={null}>
+            <GLBModel url="/models/bevel_gears.glb" />
+          </Suspense>
+        </Canvas>
+      </motion.div>
     </div>
   </div>
 </motion.section>
