@@ -466,15 +466,15 @@ function App() {
                 <h3 className="section-subtitle">Certifications</h3>
                 <div className="certifications-list">
                   <div className="certification-item">
-                    <p className="education-school">AWS Certified Machine Learning – Specialty</p>
+                    <p className="education-school">AWS Certified Data Analytics </p>
                   </div>
                   
                   <div className="certification-item">
-                    <p className="education-school">AAWS Certified Data Analytics – Specialty</p>
+                    <p className="education-school">AAWS Certified Solution Architect  </p>
                   </div>
                   
                   <div className="certification-item">
-                    <p className="education-school">AWS Certified DevOps Engineer – Professional</p>
+                    <p className="education-school">AWS Certified DevOps Engineer</p>
                   </div>
 
                   <div className="certification-item">
