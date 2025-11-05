@@ -7,8 +7,36 @@ import { CloudBackground } from './components/CloudBackground';
 import './App.css';
 
 function GLBModel({ url }: { url: string }) {
-  const { scene } = useGLTF(url);
-  return <primitive object={scene} scale={1.5} />;
+ const { scene, animations } = useGLTF(url);
+  const { ref, actions } = useAnimations(animations);
+
+  useEffect(() => {
+    if (actions && Object.keys(actions).length > 0) {
+      const action = actions[Object.keys(actions)[0]];
+      action?.setLoop(2200, 1);
+      action?.play();
+    }
+
+    // Apply blue emissive to all materials
+    scene.traverse((child) => {
+      if (child.isMesh && child.material) {
+        const mat = child.material as any;
+        mat.emissive = { r: 0, g: 0.3, b: 1 }; // Bright blue
+        mat.emissiveIntensity = 1.2;
+        mat.metalness = 0.8;
+        mat.roughness = 0.2;
+      }
+    });
+  }, [scene, actions]);
+
+  return (
+    <primitive
+      ref={ref}
+      object={scene}
+      scale={3.8}
+      position={[0, -1.3, 0]}
+    />
+  );
 }
 
 function App() {
