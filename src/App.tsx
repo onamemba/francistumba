@@ -603,7 +603,7 @@ const itemVariants = {
           <directionalLight position={[10, 10, 5]} intensity={1} />
           <OrbitControls enableZoom={false} autoRotate />
           <Suspense fallback={null}>
-            <GLBModel url="/models/scene.gltf" />
+            <GLBModel url="/models/rob_is_on_the_phone.glb" />
           </Suspense>
         </Canvas>
       </motion.div>
