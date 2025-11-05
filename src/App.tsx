@@ -603,7 +603,7 @@ const itemVariants = {
           <directionalLight position={[10, 10, 5]} intensity={1} />
           <OrbitControls enableZoom={false} autoRotate />
           <Suspense fallback={null}>
-            <GLBModel url="/models/bevel_gears.glb" />
+            <GLBModel url="/models/scene.gltf" />
           </Suspense>
         </Canvas>
       </motion.div>
