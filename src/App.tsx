@@ -364,6 +364,8 @@ const itemVariants = {
     </div>
   </div>
 </motion.section>
+
+      
       {/* Projects Section */}
       <motion.section
         id="projects"
