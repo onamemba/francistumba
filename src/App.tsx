@@ -284,25 +284,7 @@ const itemVariants = {
       </motion.section>
 
       {/* Work Experience Section */}
- <motion.section
-  id="experience"
-  className="section scroll-section"
-  variants={sectionVariants}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true, amount: 0.3 }}
->
-  <div className="section-content">
-    <div className="section-left">
-      <motion.h2 className="section-title" variants={itemVariants}>
-        <Terminal size={24} className="title-icon" />
-        WORK
-        <br />
-        EXPERIENCE
-      </motion.h2>
-    </div>
-
-    <motion.section
+<motion.section
   id="experience"
   className="section scroll-section"
   variants={sectionVariants}
