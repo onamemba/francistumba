@@ -429,10 +429,10 @@ function App() {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Education & Certifications Section */}
       <section
