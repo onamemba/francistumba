@@ -284,7 +284,7 @@ const itemVariants = {
       </motion.section>
 
       {/* Work Experience Section */}
-     <motion.section
+ <motion.section
   id="experience"
   className="section scroll-section"
   variants={sectionVariants}
@@ -304,7 +304,7 @@ const itemVariants = {
 
     <div className="section-right">
       <motion.div className="experience-content" variants={itemVariants}>
-        {/* Experience Item 1 */}
+        {/* === JOB 1 === */}
         <motion.div className="experience-item" variants={itemVariants}>
           <div className="experience-header">
             <div className="experience-company">Shoprite Holdings</div>
@@ -321,7 +321,7 @@ const itemVariants = {
           </ul>
         </motion.div>
 
-        {/* Experience Item 2 */}
+        {/* === JOB 2 === */}
         <motion.div className="experience-item" variants={itemVariants}>
           <div className="experience-header">
             <div className="experience-company">AutumnLeaf IT</div>
@@ -338,7 +338,7 @@ const itemVariants = {
           </ul>
         </motion.div>
 
-        {/* Experience Item 3 */}
+        {/* === JOB 3 === */}
         <motion.div className="experience-item" variants={itemVariants}>
           <div className="experience-header">
             <div className="experience-company">AutumnLeaf IT</div>
@@ -358,7 +358,6 @@ const itemVariants = {
     </div>
   </div>
 </motion.section>
-
       {/* Projects Section */}
       <motion.section
         id="projects"
