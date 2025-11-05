@@ -614,7 +614,7 @@ body {
 }
 
 .contact-section-content {
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr 1fr;
   align-items: start;
   gap: 4rem;
 }
