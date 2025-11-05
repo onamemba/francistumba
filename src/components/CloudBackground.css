@@ -33,79 +33,79 @@
 
 .cloud {
   position: absolute;
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 50%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 40%, transparent 70%);
   border-radius: 50%;
-  opacity: 1;
+  opacity: 0.5;
   animation: float-cloud ease-in-out infinite;
-  filter: blur(20px);
+  filter: blur(40px);
 }
 
 .cloud-1 {
-  width: 500px;
-  height: 300px;
+  width: 700px;
+  height: 400px;
   top: 10%;
   left: -100px;
-  animation-duration: 40s;
+  animation-duration: 50s;
   animation-delay: 0s;
 }
 
 .cloud-2 {
-  width: 400px;
-  height: 250px;
+  width: 600px;
+  height: 350px;
   top: 30%;
   left: 50%;
-  animation-duration: 50s;
+  animation-duration: 60s;
   animation-delay: -10s;
 }
 
 .cloud-3 {
-  width: 600px;
-  height: 350px;
+  width: 800px;
+  height: 450px;
   top: 60%;
   left: -150px;
-  animation-duration: 60s;
+  animation-duration: 70s;
   animation-delay: -20s;
 }
 
 .cloud-4 {
-  width: 450px;
-  height: 280px;
+  width: 650px;
+  height: 380px;
   top: 80%;
   left: 40%;
-  animation-duration: 55s;
+  animation-duration: 65s;
   animation-delay: -30s;
 }
 
 .cloud-5 {
-  width: 550px;
-  height: 320px;
+  width: 750px;
+  height: 420px;
   top: 40%;
   left: 70%;
-  animation-duration: 45s;
+  animation-duration: 55s;
   animation-delay: -15s;
 }
 
 @keyframes float-cloud {
   0% {
-    transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0) scale(1);
   }
   25% {
-    transform: translateX(200px) translateY(-50px);
+    transform: translateX(150px) translateY(-40px) scale(1.05);
   }
   50% {
-    transform: translateX(350px) translateY(-100px);
+    transform: translateX(280px) translateY(-80px) scale(1.1);
   }
   75% {
-    transform: translateX(200px) translateY(-60px);
+    transform: translateX(150px) translateY(-50px) scale(1.05);
   }
   100% {
-    transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0) scale(1);
   }
 }
 
 @media (max-width: 768px) {
   .cloud {
-    filter: blur(30px);
+    filter: blur(40px);
   }
 
   .cloud-1,
@@ -113,7 +113,7 @@
   .cloud-3,
   .cloud-4,
   .cloud-5 {
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 250px;
   }
 }
