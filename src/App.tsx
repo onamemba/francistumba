@@ -302,9 +302,29 @@ const itemVariants = {
       </motion.h2>
     </div>
 
+    <motion.section
+  id="experience"
+  className="section scroll-section"
+  variants={sectionVariants}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.3 }}
+>
+  <div className="section-content">
+    {/* LEFT: Title (still animates) */}
+    <div className="section-left">
+      <motion.h2 className="section-title" variants={itemVariants}>
+        <Terminal size={24} className="title-icon" />
+        WORK
+        <br />
+        EXPERIENCE
+      </motion.h2>
+    </div>
+
+    {/* RIGHT: Content (still animates) */}
     <div className="section-right">
       <motion.div className="experience-content" variants={itemVariants}>
-        {/* === JOB 1 === */}
+        {/* JOB 1 */}
         <motion.div className="experience-item" variants={itemVariants}>
           <div className="experience-header">
             <div className="experience-company">Shoprite Holdings</div>
@@ -313,6 +333,8 @@ const itemVariants = {
           <div className="experience-role">
             <Database size={16} style={{ color: '#3b82f6' }} /> Senior Data Engineer
           </div>
+
+          {/* LIST: 100% STATIC — NO MOTION */}
           <ul className="experience-details">
             <li>• Designed and managed ETL pipelines processing 10TB+ of data daily using AWS and Snowflake</li>
             <li>• Optimized data warehouses and automated reporting, reducing manual work by 80%</li>
@@ -321,7 +343,7 @@ const itemVariants = {
           </ul>
         </motion.div>
 
-        {/* === JOB 2 === */}
+        {/* JOB 2 */}
         <motion.div className="experience-item" variants={itemVariants}>
           <div className="experience-header">
             <div className="experience-company">AutumnLeaf IT</div>
@@ -330,6 +352,7 @@ const itemVariants = {
           <div className="experience-role">
             <Cpu size={16} style={{ color: '#3b82f6' }} /> DevOps Engineer
           </div>
+
           <ul className="experience-details">
             <li>• Improved CI/CD pipelines and automated deployments, reducing deployment time by 60%</li>
             <li>• Managed infrastructure using AWS CloudFormation and Docker, supporting 500+ daily transactions</li>
@@ -338,7 +361,7 @@ const itemVariants = {
           </ul>
         </motion.div>
 
-        {/* === JOB 3 === */}
+        {/* JOB 3 */}
         <motion.div className="experience-item" variants={itemVariants}>
           <div className="experience-header">
             <div className="experience-company">AutumnLeaf IT</div>
@@ -347,6 +370,7 @@ const itemVariants = {
           <div className="experience-role">
             <Globe size={16} style={{ color: '#3b82f6' }} /> IT Technician
           </div>
+
           <ul className="experience-details">
             <li>• Provided IT support for corporate clients, ensuring minimal downtime</li>
             <li>• Configured and maintained enterprise-level networks and servers</li>
