@@ -291,21 +291,25 @@ function App() {
       </motion.section>
 
       {/* Work Experience Section */}
-      <section
+      <motion.section
         id="experience"
         className="section scroll-section"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
       >
         <div className="section-content">
           <div className="section-left">
-            <h2 className="section-title">
+            <motion.h2 className="section-title" variants={itemVariants}>
               <Terminal size={24} className="title-icon" />
               WORK
               <br />
               EXPERIENCE
-            </h2>
+            </motion.h2>
           </div>
           <div className="section-right">
-            <div className="experience-content">
+            <motion.div className="experience-content" variants={itemVariants}>
               <div className="experience-item">
                 <div className="experience-header">
                   <div className="experience-company">Shoprite Holdings</div>
@@ -347,10 +351,10 @@ function App() {
                   <li>• Led troubleshooting efforts for network and hardware issues</li>
                 </ul>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Projects Section */}
       <motion.section
