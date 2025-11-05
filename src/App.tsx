@@ -534,17 +534,17 @@ const itemVariants = {
   whileInView="visible"
   viewport={{ once: true, amount: 0.3 }}
 >
-  <div className="section-content">
+  <div className="contact-grid">
     {/* LEFT: Title */}
-    <div className="section-left">
+    <div className="contact-left">
       <motion.h2 className="section-title" variants={itemVariants}>
         <Mail size={24} className="title-icon" />
         CONTACT
       </motion.h2>
     </div>
 
-    {/* RIGHT: Text + Links + 3D Model */}
-    <div className="section-right">
+    {/* CENTER: Text + Links */}
+    <div className="contact-center">
       <motion.div className="contact-content" variants={itemVariants}>
         <motion.p variants={itemVariants}>
           Ready to collaborate? Let's discuss your next project.
@@ -561,20 +561,23 @@ const itemVariants = {
             <Github size={16} /> GitHub
           </a>
         </motion.div>
+      </motion.div>
+    </div>
 
-        <motion.div
-          className="contact-model"
-          variants={itemVariants}
-        >
-          <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
-            <ambientLight intensity={0.5} />
-            <directionalLight position={[10, 10, 5]} intensity={1} />
-            <OrbitControls enableZoom={false} autoRotate />
-            <Suspense fallback={null}>
-              <GLBModel url="/models/bevel_gears.glb" />
-            </Suspense>
-          </Canvas>
-        </motion.div>
+    {/* RIGHT: 3D Model */}
+    <div className="contact-right">
+      <motion.div
+        className="model-container"
+        variants={itemVariants}
+      >
+        <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
+          <ambientLight intensity={0.5} />
+          <directionalLight position={[10, 10, 5]} intensity={1} />
+          <OrbitControls enableZoom={false} autoRotate />
+          <Suspense fallback={null}>
+            <GLBModel url="/models/bevel_gears.glb" />
+          </Suspense>
+        </Canvas>
       </motion.div>
     </div>
   </div>
