@@ -267,13 +267,6 @@ body {
   grid-template-columns: 1fr 2fr;
   gap: 4rem;
   align-items: start;
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 24px;
-  padding: 3rem;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transform-style: preserve-3d;
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -621,25 +614,31 @@ body {
 }
 
 .contact-section-content {
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: start;
+  gap: 3rem;
 }
 
 .contact-section-content .section-left {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
+}
+
+.contact-section-content .section-title {
+  margin-bottom: 1rem;
 }
 
 .sketchfab-embed-wrapper {
   position: relative;
   width: 100%;
-  padding-bottom: 75%;
+  padding-bottom: 85%;
   height: 0;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 .sketchfab-iframe {
@@ -669,7 +668,6 @@ body {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
-    padding: 2rem 1.5rem;
   }
 
   .section-title {
@@ -720,9 +718,7 @@ body {
 
   .hero-content,
   .section-content {
-    padding: 1.5rem;
     gap: 1.5rem;
-    border-radius: 16px;
   }
 
   .hero-content {
