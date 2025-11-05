@@ -349,8 +349,10 @@ body {
 
 .animate-in .experience-details li,
 .animate-in .certifications-list .certification-item {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  animation: none !important;
 }
 
 .animate-in .experience-details li:nth-child(1) { transition-delay: 0.1s; }
