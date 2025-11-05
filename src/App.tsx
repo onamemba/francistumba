@@ -293,66 +293,101 @@ function App() {
       </motion.section>
 
       {/* Work Experience Section */}
-      <section
-        id="experience"
-        className="section scroll-section"
-      >
-        <div className="section-content">
-          <div className="section-left">
-            <h2 className="section-title">
-              <Terminal size={24} className="title-icon" />
-              WORK
-              <br />
-              EXPERIENCE
-            </h2>
+      <motion.section
+  id="experience"
+  className="section scroll-section"
+  variants={sectionVariants}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.3 }}
+>
+  <div className="section-content">
+    <div className="section-left">
+      <motion.h2 className="section-title" variants={itemVariants}>
+        <Terminal size={24} className="title-icon" />
+        WORK
+        <br />
+        EXPERIENCE
+      </motion.h2>
+    </div>
+    <div className="section-right">
+      <motion.div className="experience-content" variants={itemVariants}>
+        {/* Experience Items */}
+        <motion.div className="experience-item" variants={itemVariants}>
+          <div className="experience-header">
+            <div className="experience-company">Shoprite Holdings</div>
+            <div className="experience-period">2021 - 2024</div>
           </div>
-          <div className="section-right">
-            <div className="experience-content">
-              <div className="experience-item">
-                <div className="experience-header">
-                  <div className="experience-company">Shoprite Holdings</div>
-                  <div className="experience-period">2021 - 2024</div>
-                </div>
-                <div className="experience-role"><Database size={16} style={{color: '#3b82f6'}} /> Senior Data Engineer</div>
-                <ul className="experience-details">
-                  <li>• Designed and managed ETL pipelines processing 10TB+ of data daily using AWS and Snowflake</li>
-                  <li>• Optimized data warehouses and automated reporting, reducing manual work by 80%</li>
-                  <li>• Built real-time analytics dashboards that improved business decision-making speed by 50%</li>
-                  <li>• Led data architecture initiatives and mentored junior engineers on best practices</li>
-                </ul>
-              </div>
-              
-              <div className="experience-item">
-                <div className="experience-header">
-                  <div className="experience-company">AutumnLeaf IT</div>
-                  <div className="experience-period">2019 - 2021</div>
-                </div>
-                <div className="experience-role"><Cpu size={16} style={{color: '#3b82f6'}} /> DevOps Engineer</div>
-                <ul className="experience-details">
-                  <li>• Improved CI/CD pipelines and automated deployments, reducing deployment time by 60%</li>
-                  <li>• Managed infrastructure using AWS CloudFormation and Docker, supporting 500+ daily transactions</li>
-                  <li>• Implemented monitoring and alerting systems that improved system reliability by 35%</li>
-                  <li>• Collaborated with development teams to optimize application performance and scalability</li>
-                </ul>
-              </div>
-              
-              <div className="experience-item">
-                <div className="experience-header">
-                  <div className="experience-company">AutumnLeaf IT</div>
-                  <div className="experience-period">2018 - 2019</div>
-                </div>
-                <div className="experience-role"><Globe size={16} style={{color: '#3b82f6'}} /> IT Technician</div>
-                <ul className="experience-details">
-                  <li>• Provided IT support for corporate clients, ensuring minimal downtime</li>
-                  <li>• Configured and maintained enterprise-level networks and servers</li>
-                  <li>• Managed software updates, security patches, and data backups</li>
-                  <li>• Led troubleshooting efforts for network and hardware issues</li>
-                </ul>
-              </div>
-            </div>
+          <div className="experience-role">
+            <Database size={16} style={{ color: '#3b82f6' }} /> Senior Data Engineer
           </div>
-        </div>
-      </section>
+          <ul className="experience-details">
+            <motion.li variants={itemVariants}>
+              • Designed and managed ETL pipelines processing 10TB+ of data daily using AWS and Snowflake
+            </motion.li>
+            <motion.li variants={itemVariants}>
+              • Optimized data warehouses and automated reporting, reducing manual work by 80%
+            </motion.li>
+            <motion.li variants={itemVariants}>
+              • Built real-time analytics dashboards that improved business decision-making speed by 50%
+            </motion.li>
+            <motion.li variants={itemVariants}>
+              • Led data architecture initiatives and mentored junior engineers on best practices
+            </motion.li>
+          </ul>
+        </motion.div>
+
+        <motion.div className="experience-item" variants={itemVariants}>
+          <div className="experience-header">
+            <div className="experience-company">AutumnLeaf IT</div>
+            <div className="experience-period">2019 - 2021</div>
+          </div>
+          <div className="experience-role">
+            <Cpu size={16} style={{ color: '#3b82f6' }} /> DevOps Engineer
+          </div>
+          <ul className="experience-details">
+            <motion.li variants={itemVariants}>
+              • Improved CI/CD pipelines and automated deployments, reducing deployment time by 60%
+            </motion.li>
+            <motion.li variants={itemVariants}>
+              • Managed infrastructure using AWS CloudFormation and Docker, supporting 500+ daily transactions
+            </motion.li>
+            <motion.li variants={itemVariants}>
+              • Implemented monitoring and alerting systems that improved system reliability by 35%
+            </motion.li>
+            <motion.li variants={itemVariants}>
+              • Collaborated with development teams to optimize application performance and scalability
+            </motion.li>
+          </ul>
+        </motion.div>
+
+        <motion.div className="experience-item" variants={itemVariants}>
+          <div className="experience-header">
+            <div className="experience-company">AutumnLeaf IT</div>
+            <div className="experience-period">2018 - 2019</div>
+          </div>
+          <div className="experience-role">
+            <Globe size={16} style={{ color: '#3b82f6' }} /> IT Technician
+          </div>
+          <ul className="experience-details">
+            <motion.li variants={itemVariants}>
+              • Provided IT support for corporate clients, ensuring minimal downtime
+            </motion.li>
+            <motion.li variants={itemVariants}>
+              • Configured and maintained enterprise-level networks and servers
+            </motion.li>
+            <motion.li variants={itemVariants}>
+              • Managed software updates, security patches, and data backups
+            </motion.li>
+            <motion.li variants={itemVariants}>
+              • Led troubleshooting efforts for network and hardware issues
+            </motion.li>
+          </ul>
+        </motion.div>
+      </motion.div>
+    </div>
+  </div>
+</motion.section>
 
       {/* Projects Section */}
       <motion.section
