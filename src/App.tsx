@@ -466,6 +466,7 @@ function App() {
                 <h3 className="section-subtitle">Certifications</h3>
                 <div className="certifications-list">
                   <div className="certification-item">
+                    <p className="education-school">WorldQuant University / Graduated: 2024</p>
                     <div className="certification-name" style={{ fontFamily: "'Inter', sans-serif" }}>AWS Certified Machine Learning – Specialty</div>
                   </div>
                   
