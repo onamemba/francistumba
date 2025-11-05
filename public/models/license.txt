@@ -1,0 +1,11 @@
+Model Information:
+* title:	Rob is on the phone
+* source:	https://sketchfab.com/3d-models/rob-is-on-the-phone-f79ce8f87940478ba197ca8694a1a71d
+* author:	alexandre.pageot (https://sketchfab.com/alexandre.pageot)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Rob is on the phone" (https://sketchfab.com/3d-models/rob-is-on-the-phone-f79ce8f87940478ba197ca8694a1a71d) by alexandre.pageot (https://sketchfab.com/alexandre.pageot) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
