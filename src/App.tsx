@@ -534,16 +534,19 @@ const itemVariants = {
   whileInView="visible"
   viewport={{ once: true, amount: 0.3 }}
 >
-  <div className="section-content contact-section-content">
-    {/* LEFT: Title + Text + Links */}
+  <div className="section-content">
+    {/* LEFT: Title */}
     <div className="section-left">
       <motion.h2 className="section-title" variants={itemVariants}>
         <Mail size={24} className="title-icon" />
         CONTACT
       </motion.h2>
+    </div>
 
+    {/* RIGHT: Text + Links + 3D Model */}
+    <div className="section-right">
       <motion.div className="contact-content" variants={itemVariants}>
-        <motion.p variants={itemVariants} className="text-center md:text-left">
+        <motion.p variants={itemVariants}>
           Ready to collaborate? Let's discuss your next project.
         </motion.p>
 
@@ -558,23 +561,20 @@ const itemVariants = {
             <Github size={16} /> GitHub
           </a>
         </motion.div>
-      </motion.div>
-    </div>
 
-    {/* RIGHT: 3D Model (GLB) */}
-    <div className="section-right">
-      <motion.div
-        className="w-full h-96 md:h-full"
-        variants={itemVariants}
-      >
-        <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[10, 10, 5]} intensity={1} />
-          <OrbitControls enableZoom={false} autoRotate />
-          <Suspense fallback={null}>
-            <GLBModel url="/models/bevel_gears.glb" />
-          </Suspense>
-        </Canvas>
+        <motion.div
+          className="contact-model"
+          variants={itemVariants}
+        >
+          <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
+            <ambientLight intensity={0.5} />
+            <directionalLight position={[10, 10, 5]} intensity={1} />
+            <OrbitControls enableZoom={false} autoRotate />
+            <Suspense fallback={null}>
+              <GLBModel url="/models/bevel_gears.glb" />
+            </Suspense>
+          </Canvas>
+        </motion.div>
       </motion.div>
     </div>
   </div>

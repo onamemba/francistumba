@@ -629,12 +629,25 @@ body {
   max-width: 420px;
 }
 
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-content p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #cccccc;
+  margin: 0;
+}
+
 .contact-links {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 100%;
-  max-width: 340px;
+  max-width: 400px;
 }
 
 .contact-link {
@@ -661,30 +674,17 @@ body {
   box-shadow: 0 4px 12px rgba(74, 158, 255, 0.2);
 }
 
-/* RIGHT: 3D Model Container */
-.contact-right {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.model-container {
+.contact-model {
   width: 100%;
-  max-width: 420px;
-  height: 420px;
+  height: 500px;
+  margin-top: 2rem;
   border-radius: 16px;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.model-container:hover {
-  transform: scale(1.02);
-}
-
-.model-container canvas {
+.contact-model canvas {
   width: 100% !important;
   height: 100% !important;
 }
