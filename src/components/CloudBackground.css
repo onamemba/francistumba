@@ -33,11 +33,11 @@
 
 .cloud {
   position: absolute;
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
   border-radius: 50%;
-  opacity: 0.6;
+  opacity: 0.8;
   animation: float-cloud linear infinite;
-  filter: blur(40px);
+  filter: blur(30px);
 }
 
 .cloud-1 {
@@ -89,8 +89,14 @@
   0% {
     transform: translateX(0) translateY(0);
   }
+  25% {
+    transform: translateX(150px) translateY(-30px);
+  }
   50% {
-    transform: translateX(100px) translateY(-50px);
+    transform: translateX(250px) translateY(-80px);
+  }
+  75% {
+    transform: translateX(150px) translateY(-50px);
   }
   100% {
     transform: translateX(0) translateY(0);

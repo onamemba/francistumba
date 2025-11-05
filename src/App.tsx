@@ -531,11 +531,11 @@ function App() {
           <div className="section-right">
             <div className="sketchfab-embed-wrapper">
               <iframe
-                title="Engineering Gadget"
+                title="Bevel Gears"
                 frameBorder="0"
                 allowFullScreen
                 allow="autoplay; fullscreen; xr-spatial-tracking"
-                src="https://sketchfab.com/models/5f3d5b5f4a8e4f5b8f5b8f5b/embed?autostart=1&autospin=1&ui_theme=dark&ui_hint=0&ui_controls=0&ui_infos=0&ui_inspector=0&ui_stop=0&ui_watermark=0"
+                src="https://sketchfab.com/models/c2895a2ac493424bac4656af74b644dd/embed"
                 className="sketchfab-iframe"
               ></iframe>
             </div>
