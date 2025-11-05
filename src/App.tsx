@@ -499,40 +499,45 @@ function App() {
         className="section scroll-section"
       >
         <div className="section-content contact-section-content">
-          <div className="contact-left-section">
-            <h2 className="contact-main-title">LET'S WORK TOGETHER</h2>
-            <div className="contact-info">
-              <a href="mailto:onamemba@gmail.com" className="contact-email">
-                onamemba@gmail.com
-              </a>
-              <div className="contact-address">
-                123-456-7890<br />
-                500 Terry Francine Street,<br />
-                San Francisco, CA 94158
+          <div className="section-left">
+            <h2 className="section-title">
+              <Mail size={24} className="title-icon" />
+              CONTACT
+            </h2>
+            <div className="contact-content">
+              <p>Ready to collaborate? Let's discuss your next project.</p>
+              <div className="contact-links">
+                <a
+                  href="mailto:onamemba@gmail.com"
+                  className="contact-link"
+                >
+                  <Mail size={16} /> onamemba@gmail.com
+                </a>
+                <a
+                  href="https://linkedin.com/in/francistumba"
+                  className="contact-link"
+                >
+                  <Linkedin size={16} /> LinkedIn
+                </a>
+                <a
+                  href="https://github.com/francistumba"
+                  className="contact-link"
+                >
+                  <Github size={16} /> GitHub
+                </a>
               </div>
             </div>
-            <div className="contact-social-buttons">
-              <a
-                href="https://linkedin.com/in/francistumba"
-                className="contact-social-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LINKEDIN <ArrowUpRight size={16} />
-              </a>
-              <a
-                href="https://github.com/francistumba"
-                className="contact-social-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GITHUB <ArrowUpRight size={16} />
-              </a>
-            </div>
           </div>
-          <div className="contact-right-section">
-            <div className="contact-arrow-icon">
-              <ArrowUpRight size={48} />
+          <div className="section-right">
+            <div className="sketchfab-embed-wrapper">
+              <iframe
+                title="Engineering Gadget"
+                frameBorder="0"
+                allowFullScreen
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                src="https://sketchfab.com/models/5f3d5b5f4a8e4f5b8f5b8f5b/embed?autostart=1&autospin=1&ui_theme=dark&ui_hint=0&ui_controls=0&ui_infos=0&ui_inspector=0&ui_stop=0&ui_watermark=0"
+                className="sketchfab-iframe"
+              ></iframe>
             </div>
           </div>
         </div>
