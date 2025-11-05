@@ -291,25 +291,21 @@ function App() {
       </motion.section>
 
       {/* Work Experience Section */}
-      <motion.section
+      <section
         id="experience"
         className="section scroll-section"
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
       >
         <div className="section-content">
           <div className="section-left">
-            <motion.h2 className="section-title" variants={itemVariants}>
+            <h2 className="section-title">
               <Terminal size={24} className="title-icon" />
               WORK
               <br />
               EXPERIENCE
-            </motion.h2>
+            </h2>
           </div>
           <div className="section-right">
-            <motion.div className="experience-content" variants={itemVariants}>
+            <div className="experience-content">
               <div className="experience-item">
                 <div className="experience-header">
                   <div className="experience-company">Shoprite Holdings</div>
@@ -351,10 +347,10 @@ function App() {
                   <li>• Led troubleshooting efforts for network and hardware issues</li>
                 </ul>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Projects Section */}
       <motion.section
@@ -439,25 +435,21 @@ function App() {
       </motion.section>
 
       {/* Education & Certifications Section */}
-      <motion.section
+      <section
         id="education"
         className="section scroll-section"
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
       >
         <div className="section-content">
           <div className="section-left">
-            <motion.h2 className="section-title" variants={itemVariants}>
+            <h2 className="section-title">
               <GraduationCap size={24} className="title-icon" />
               EDUCATION &
               <br />
               CERTIFICATIONS
-            </motion.h2>
+            </h2>
           </div>
           <div className="section-right">
-            <motion.div className="education-content" variants={itemVariants}>
+            <div className="education-content">
               <div className="education-section">
                 <h3 className="section-subtitle">Education</h3>
                 <div className="education-item">
@@ -494,10 +486,10 @@ function App() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Contact Section */}
       <section
