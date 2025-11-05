@@ -1,8 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowUpRight, Download, ExternalLink, Linkedin, Github, Code, Terminal, Database, Cloud, Cpu, Globe, Zap, Monitor, Mail, User, GraduationCap } from 'lucide-react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, useGLTF } from '@react-three/drei';
 import { CloudBackground } from './components/CloudBackground';
 import './App.css';
+
+function GLBModel({ url }: { url: string }) {
+  const { scene } = useGLTF(url);
+  return <primitive object={scene} scale={1.5} />;
+}
 
 function App() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -564,8 +571,8 @@ const itemVariants = {
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} intensity={1} />
           <OrbitControls enableZoom={false} autoRotate />
-          <Suspense fallback={<div className="text-white">Loading 3D...</div>}>
-            <GLBModel url="/models/your-model.glb" />
+          <Suspense fallback={null}>
+            <GLBModel url="/models/bevel_gears.glb" />
           </Suspense>
         </Canvas>
       </motion.div>
