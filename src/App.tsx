@@ -59,35 +59,24 @@ function App() {
   };
 
   // Framer Motion variants for sections
-  const sectionVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 100,
-      scale: 0.95,
-      rotateX: 10
+ const sectionVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1.2,
+      ease: [0.25, 0.46, 0.45, 0.94],
+      staggerChildren: 0.15,
     },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      scale: 1,
-      rotateX: 0,
-      transition: {
-        duration: 1.2,
-        ease: [0.25, 0.46, 0.45, 0.94],
-        staggerChildren: 0.2
-      }
-    }
-  };
+  },
+};
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50, rotateX: 15 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      rotateX: 0,
-      transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }
-    }
-  };
+const itemVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] },
+  },
   return (
     <motion.div
       className="app scroll-container"
