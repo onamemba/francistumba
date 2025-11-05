@@ -470,19 +470,19 @@ function App() {
                   </div>
                   
                   <div className="certification-item">
-                    <div className="certification-name" style={{ fontFamily: "'Inter', sans-serif" }}>AWS Certified Data Analytics – Specialty</div>
+                    <p className="education-school">AAWS Certified Data Analytics – Specialty</p>
                   </div>
                   
                   <div className="certification-item">
-                    <div className="certification-name" style={{ fontFamily: "'Inter', sans-serif" }}>AWS Certified DevOps Engineer – Professional</div>
+                    <p className="education-school">AWS Certified DevOps Engineer – Professional</p>
                   </div>
 
                   <div className="certification-item">
-                    <div className="certification-name" style={{ fontFamily: "'Inter', sans-serif" }}>Snowflake SnowPro Core Certification</div>
+                    <p className="education-school">Snowflake SnowPro Core Certification</p>
                   </div>
 
                   <div className="certification-item">
-                    <div className="certification-name" style={{ fontFamily: "'Inter', sans-serif" }}>Python Institute Certification (PCAP)</div>
+                    <p className="education-school">Python Institute Certification (PCAP)</p>
                   </div>
                 </div>
               </div>
