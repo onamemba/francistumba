@@ -291,22 +291,18 @@ function App() {
       </motion.section>
 
       {/* Work Experience Section */}
-      <motion.section
+      <section
         id="experience"
         className="section scroll-section"
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
       >
         <div className="section-content">
           <div className="section-left">
-            <motion.h2 className="section-title" variants={itemVariants}>
+            <h2 className="section-title">
               <Terminal size={24} className="title-icon" />
               WORK
               <br />
               EXPERIENCE
-            </motion.h2>
+            </h2>
           </div>
           <div className="section-right">
             <div className="experience-content">
@@ -433,10 +429,10 @@ function App() {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Education & Certifications Section */}
       <section
