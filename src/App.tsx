@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowUpRight, Download, ExternalLink, Linkedin, Github, Code, Terminal, Database, Cloud, Cpu, Globe, Zap, Monitor, Mail, User } from 'lucide-react';
+import { ArrowUpRight, Download, ExternalLink, Linkedin, Github, Code, Terminal, Database, Cloud, Cpu, Globe, Zap, Monitor, Mail, User, GraduationCap } from 'lucide-react';
 import './App.css';
 
 function App() {
@@ -294,18 +294,22 @@ function App() {
       <motion.section
         id="experience"
         className="section scroll-section"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
       >
         <div className="section-content">
           <div className="section-left">
-            <h2 className="section-title">
+            <motion.h2 className="section-title" variants={itemVariants}>
               <Terminal size={24} className="title-icon" />
               WORK
               <br />
               EXPERIENCE
-            </h2>
+            </motion.h2>
           </div>
           <div className="section-right">
-            <div className="experience-content">
+            <motion.div className="experience-content" variants={itemVariants}>
               <div className="experience-item">
                 <div className="experience-header">
                   <div className="experience-company">Shoprite Holdings</div>
@@ -347,7 +351,7 @@ function App() {
                   <li>• Led troubleshooting efforts for network and hardware issues</li>
                 </ul>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </motion.section>
@@ -435,21 +439,25 @@ function App() {
       </motion.section>
 
       {/* Education & Certifications Section */}
-      <section
+      <motion.section
         id="education"
         className="section scroll-section"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
       >
         <div className="section-content">
           <div className="section-left">
-            <h2 className="section-title">
-              🎓
+            <motion.h2 className="section-title" variants={itemVariants}>
+              <GraduationCap size={24} className="title-icon" />
               EDUCATION &
               <br />
               CERTIFICATIONS
-            </h2>
+            </motion.h2>
           </div>
           <div className="section-right">
-            <div className="education-content">
+            <motion.div className="education-content" variants={itemVariants}>
               <div className="education-section">
                 <h3 className="section-subtitle">Education</h3>
                 <div className="education-item">
@@ -486,10 +494,10 @@ function App() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Contact Section */}
       <section
