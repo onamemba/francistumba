@@ -1,5 +1,5 @@
 import React, { useState, Suspense } from 'react';
-import { Github, Linkedin, Instagram, Globe2 } from 'lucide-react';
+import { Github, Instagram, Globe2 } from 'lucide-react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 
@@ -25,7 +25,7 @@ const WebsiteContent: React.FC = () => {
                 src="/images/profile_face_image.jpg"
                 alt="Profile"
                 className="w-48 h-48 rounded-full object-cover border-4 border-gray-300 shadow-[10px_8px_0px_0px_rgba(128,128,128,0.10)] flex-shrink-0"
-                style={{ objectPosition: 'center 60%', transform: 'scale(1.2)' }}
+                style={{ objectPosition: 'center 70%', transform: 'scale(1.2)' }}
               />
               <div className="flex-1">
                 <h1 className="page-content font-press-start text-lg mb-4">About Me</h1>
@@ -155,9 +155,6 @@ const WebsiteContent: React.FC = () => {
                   <div className="mt-6 flex gap-4">
                     <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
                       <Github className="w-6 h-6" />
-                    </a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
-                      <Linkedin className="w-6 h-6" />
                     </a>
                     <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
                       <Instagram className="w-6 h-6" />
