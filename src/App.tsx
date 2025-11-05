@@ -309,7 +309,7 @@ function App() {
             </motion.h2>
           </div>
           <div className="section-right">
-            <motion.div className="experience-content" variants={itemVariants}>
+            <div className="experience-content">
               <div className="experience-item">
                 <div className="experience-header">
                   <div className="experience-company">Shoprite Holdings</div>
@@ -351,7 +351,7 @@ function App() {
                   <li>• Led troubleshooting efforts for network and hardware issues</li>
                 </ul>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </motion.section>
