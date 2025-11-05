@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowUpRight, Download, ExternalLink, Linkedin, Github, Code, Terminal, Database, Cloud, Cpu, Globe, Zap, Monitor, Mail, User, GraduationCap } from 'lucide-react';
+import { CloudBackground } from './components/CloudBackground';
 import './App.css';
 
 function App() {
@@ -92,6 +93,7 @@ function App() {
       className="app scroll-container"
       style={{ backgroundPositionY: backgroundY }}
     >
+      <CloudBackground />
       {/* Navigation */}
       <motion.nav 
         className="nav"
@@ -496,36 +498,46 @@ function App() {
         id="contact"
         className="section scroll-section"
       >
-        <div className="section-content">
+        <div className="section-content contact-section-content">
           <div className="section-left">
             <h2 className="section-title">
               <Mail size={24} className="title-icon" />
               CONTACT
             </h2>
-          </div>
-          <div className="section-right">
             <div className="contact-content">
               <p>Ready to collaborate? Let's discuss your next project.</p>
               <div className="contact-links">
-                <a 
-                  href="mailto:onamemba@gmail.com" 
+                <a
+                  href="mailto:onamemba@gmail.com"
                   className="contact-link"
                 >
                   <Mail size={16} /> onamemba@gmail.com
                 </a>
-                <a 
-                  href="https://linkedin.com/in/francistumba" 
+                <a
+                  href="https://linkedin.com/in/francistumba"
                   className="contact-link"
                 >
                   <Linkedin size={16} /> LinkedIn
                 </a>
-                <a 
-                  href="https://github.com/francistumba" 
+                <a
+                  href="https://github.com/francistumba"
                   className="contact-link"
                 >
                   <Github size={16} /> GitHub
                 </a>
               </div>
+            </div>
+          </div>
+          <div className="section-right">
+            <div className="sketchfab-embed-wrapper">
+              <iframe
+                title="Engineering Gadget"
+                frameBorder="0"
+                allowFullScreen
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                src="https://sketchfab.com/models/5f3d5b5f4a8e4f5b8f5b8f5b/embed?autostart=1&autospin=1&ui_theme=dark&ui_hint=0&ui_controls=0&ui_infos=0&ui_inspector=0&ui_stop=0&ui_watermark=0"
+                className="sketchfab-iframe"
+              ></iframe>
             </div>
           </div>
         </div>
