@@ -33,8 +33,8 @@ function GLBModel({ url }: { url: string }) {
     <primitive
       ref={ref}
       object={scene}
-      scale={0.05}
-      position={[0, -10, 0]}
+      scale={2}
+      position={[0, -1, 0]}
     />
   );
 }
@@ -601,7 +601,7 @@ const itemVariants = {
         <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} intensity={1} />
-          <OrbitControls enableZoom={false} autoRotate />
+          <OrbitControls enableZoom={false} autoRotate={false} />
           <Suspense fallback={null}>
             <GLBModel url="/models/rob_is_on_the_phone.glb" />
           </Suspense>
