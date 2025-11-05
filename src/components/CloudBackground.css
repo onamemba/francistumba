@@ -33,73 +33,73 @@
 
 .cloud {
   position: absolute;
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 40%, rgba(255, 255, 255, 0.02) 70%, transparent 90%);
+  background: radial-gradient(ellipse at center, rgba(200, 200, 210, 0.25) 0%, rgba(180, 180, 200, 0.15) 40%, rgba(160, 160, 180, 0.05) 70%, transparent 90%);
   border-radius: 50%;
-  opacity: 0.7;
-  animation: float-cloud ease-in-out infinite;
-  filter: blur(35px);
+  opacity: 0.8;
+  animation: float-cloud linear infinite;
+  filter: blur(50px);
+  will-change: transform;
 }
 
 .cloud-1 {
-  width: 700px;
-  height: 400px;
-  top: 10%;
-  left: -100px;
-  animation-duration: 50s;
+  width: 800px;
+  height: 450px;
+  top: 5%;
+  left: -200px;
+  animation-duration: 35s;
   animation-delay: 0s;
 }
 
 .cloud-2 {
-  width: 600px;
-  height: 350px;
-  top: 30%;
-  left: 50%;
-  animation-duration: 60s;
+  width: 700px;
+  height: 400px;
+  top: 25%;
+  left: 60%;
+  animation-duration: 40s;
   animation-delay: -10s;
 }
 
 .cloud-3 {
-  width: 800px;
-  height: 450px;
-  top: 60%;
-  left: -150px;
-  animation-duration: 70s;
+  width: 900px;
+  height: 500px;
+  top: 50%;
+  left: -300px;
+  animation-duration: 45s;
   animation-delay: -20s;
 }
 
 .cloud-4 {
-  width: 650px;
-  height: 380px;
-  top: 80%;
-  left: 40%;
-  animation-duration: 65s;
+  width: 750px;
+  height: 430px;
+  top: 75%;
+  left: 50%;
+  animation-duration: 38s;
   animation-delay: -30s;
 }
 
 .cloud-5 {
-  width: 750px;
-  height: 420px;
-  top: 40%;
-  left: 70%;
-  animation-duration: 55s;
+  width: 850px;
+  height: 470px;
+  top: 35%;
+  left: 80%;
+  animation-duration: 42s;
   animation-delay: -15s;
 }
 
 @keyframes float-cloud {
   0% {
-    transform: translateX(0) translateY(0) scale(1);
+    transform: translateX(-100vw) translateY(0) scale(1) rotate(0deg);
+    opacity: 0;
   }
-  25% {
-    transform: translateX(150px) translateY(-40px) scale(1.05);
+  10% {
+    opacity: 0.8;
   }
-  50% {
-    transform: translateX(280px) translateY(-80px) scale(1.1);
-  }
-  75% {
-    transform: translateX(150px) translateY(-50px) scale(1.05);
+  90% {
+    opacity: 0.8;
   }
   100% {
-    transform: translateX(0) translateY(0) scale(1);
+    transform: translateX(100vw) translateY(-50px) scale(1.2) rotate(5deg);
+    opacity: 0;
   }
 }
 
