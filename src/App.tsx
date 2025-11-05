@@ -466,61 +466,77 @@ const itemVariants = {
       </motion.section>
 
       {/* Education & Certifications Section */}
-      <section
-        id="education"
-        className="section scroll-section"
-      >
-        <div className="section-content">
-          <div className="section-left">
-            <h2 className="section-title">
-              <GraduationCap size={24} className="title-icon" />
-              EDUCATION &
-              <br />
-              CERTIFICATIONS
-            </h2>
-          </div>
-          <div className="section-right">
-            <div className="education-content">
-              <div className="education-section">
-                <h3 className="section-subtitle">Education</h3>
-                <div className="education-item">
-                  <h4 className="education-degree">Master of Science in Data Science & Quantitative Analysis</h4>
-                  <p className="education-school">WorldQuant University / Graduated: 2024</p>
-                </div>
-                <div className="education-item">
-                  <h4 className="education-degree">Bachelor of Technology in Information Technology</h4>
-                  <p className="education-school">Cape Peninsula University of Technology / Graduated: 2019</p>
-                </div>
-              </div>
+     <motion.section
+  id="education"
+  className="section scroll-section"
+  variants={sectionVariants}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.3 }}
+>
+  <div className="section-content">
+    {/* Left: Title */}
+    <div className="section-left">
+      <motion.h2 className="section-title" variants={itemVariants}>
+        <GraduationCap size={24} className="title-icon" />
+        EDUCATION &
+        <br />
+        CERTIFICATIONS
+      </motion.h2>
+    </div>
 
-              <div className="certifications-section">
-                <h3 className="section-subtitle">Certifications</h3>
-                <div className="certifications-list">
-                  <div className="certification-item">
-                    <p className="education-school">AWS Certified Data Analytics </p>
-                  </div>
-                  
-                  <div className="certification-item">
-                    <p className="education-school">AAWS Certified Solution Architect  </p>
-                  </div>
-                  
-                  <div className="certification-item">
-                    <p className="education-school">AWS Certified DevOps Engineer</p>
-                  </div>
+    {/* Right: Content */}
+    <div className="section-right">
+      <motion.div className="education-content" variants={itemVariants}>
+        {/* Education */}
+        <motion.div className="education-section" variants={itemVariants}>
+          <motion.h3 className="section-subtitle" variants={itemVariants}>
+            Education
+          </motion.h3>
 
-                  <div className="certification-item">
-                    <p className="education-school">Snowflake SnowPro Core Certification</p>
-                  </div>
+          <motion.div className="education-item" variants={itemVariants}>
+            <h4 className="education-degree">
+              Master of Science in Data Science & Quantitative Analysis
+            </h4>
+            <p className="education-school">WorldQuant University / Graduated: 2024</p>
+          </motion.div>
 
-                  <div className="certification-item">
-                    <p className="education-school">Python Institute Certification (PCAP)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          <motion.div className="education-item" variants={itemVariants}>
+            <h4 className="education-degree">
+              Bachelor of Technology in Information Technology
+            </h4>
+            <p className="education-school">Cape Peninsula University of Technology / Graduated: 2019</p>
+          </motion.div>
+        </motion.div>
+
+        {/* Certifications */}
+        <motion.div className="certifications-section" variants={itemVariants}>
+          <motion.h3 className="section-subtitle" variants={itemVariants}>
+            Certifications
+          </motion.h3>
+
+          <motion.div className="certifications-list" variants={itemVariants}>
+            <motion.div className="certification-item" variants={itemVariants}>
+              <p className="education-school">AWS Certified Data Analytics</p>
+            </motion.div>
+            <motion.div className="certification-item" variants={itemVariants}>
+              <p className="education-school">AWS Certified Solutions Architect</p>
+            </motion.div>
+            <motion.div className="certification-item" variants={itemVariants}>
+              <p className="education-school">AWS Certified DevOps Engineer</p>
+            </motion.div>
+            <motion.div className="certification-item" variants={itemVariants}>
+              <p className="education-school">Snowflake SnowPro Core Certification</p>
+            </motion.div>
+            <motion.div className="certification-item" variants={itemVariants}>
+              <p className="education-school">Python Institute Certification (PCAP)</p>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+    </div>
+  </div>
+</motion.section>
 
       {/* Contact Section */}
       <section
