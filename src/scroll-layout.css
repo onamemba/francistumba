@@ -95,6 +95,9 @@
 @media (max-width: 768px) {
   .section {
     align-items: flex-start;
+  }
+
+  .section-content {
     padding-top: 80px;
   }
 }
