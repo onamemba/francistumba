@@ -686,6 +686,7 @@ body {
     grid-template-columns: 1fr;
     gap: 3rem;
     text-align: center;
+    padding-top: 80px;
   }
 
   .contact-left,
