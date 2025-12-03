@@ -709,6 +709,7 @@ body {
 @media (max-width: 640px) {
   .contact-grid {
     padding: 3rem 1rem;
+    padding-top: 80px;
   }
   .model-container {
     height: 300px;
