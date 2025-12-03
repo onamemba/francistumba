@@ -202,7 +202,7 @@ const itemVariants = {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ delay: 1.2, duration: 1, ease: "easeOut" }}
               >
-                CLOUD ENGINEER
+                SOFTWARE ENGINEER
               </motion.h1>
               <div className="hero-buttons">
                 <motion.button 
@@ -318,86 +318,6 @@ const itemVariants = {
         </div>
       </motion.section>
 
-      {/* Work Experience Section */}
-<motion.section
-  id="experience"
-  className="section scroll-section"
-  variants={sectionVariants}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true, amount: 0.3 }}
->
-  <div className="section-content">
-    {/* LEFT: Title — same as About */}
-    <div className="section-left">
-      <motion.h2 className="section-title" variants={itemVariants}>
-        <Terminal size={24} className="title-icon" />
-        WORK
-        <br />
-        EXPERIENCE
-      </motion.h2>
-    </div>
-
-    {/* RIGHT: Each job = one animated item */}
-    <div className="section-right">
-      <motion.div className="experience-content" variants={itemVariants}>
-        {/* JOB 1 */}
-        <motion.div className="experience-item" variants={itemVariants}>
-          <div className="experience-header">
-            <div className="experience-company">Shoprite Holdings</div>
-            <div className="experience-period">2021 - 2024</div>
-          </div>
-          <div className="experience-role">
-            <Database size={16} style={{ color: '#3b82f6' }} /> Senior Data Engineer
-          </div>
-          {/* BULLETS: STATIC */}
-          <ul className="experience-details">
-            <li>• Designed and managed ETL pipelines processing 10TB+ of data daily using AWS and Snowflake</li>
-            <li>• Optimized data warehouses and automated reporting, reducing manual work by 80%</li>
-            <li>• Built real-time analytics dashboards that improved business decision-making speed by 50%</li>
-            <li>• Led data architecture initiatives and mentored junior engineers on best practices</li>
-          </ul>
-        </motion.div>
-
-        {/* JOB 2 */}
-        <motion.div className="experience-item" variants={itemVariants}>
-          <div className="experience-header">
-            <div className="experience-company">AutumnLeaf IT</div>
-            <div className="experience-period">2019 - 2021</div>
-          </div>
-          <div className="experience-role">
-            <Cpu size={16} style={{ color: '#3b82f6' }} /> DevOps Engineer
-          </div>
-          <ul className="experience-details">
-            <li>• Improved CI/CD pipelines and automated deployments, reducing deployment time by 60%</li>
-            <li>• Managed infrastructure using AWS CloudFormation and Docker, supporting 500+ daily transactions</li>
-            <li>• Implemented monitoring and alerting systems that improved system reliability by 35%</li>
-            <li>• Collaborated with development teams to optimize application performance and scalability</li>
-          </ul>
-        </motion.div>
-
-        {/* JOB 3 */}
-        <motion.div className="experience-item" variants={itemVariants}>
-          <div className="experience-header">
-            <div className="experience-company">AutumnLeaf IT</div>
-            <div className="experience-period">2018 - 2019</div>
-          </div>
-          <div className="experience-role">
-            <Globe size={16} style={{ color: '#3b82f6' }} /> IT Technician
-          </div>
-          <ul className="experience-details">
-            <li>• Provided IT support for corporate clients, ensuring minimal downtime</li>
-          <li>• Configured and maintained enterprise-level networks and servers</li>
-            <li>• Managed software updates, security patches, and data backups</li>
-            <li>• Led troubleshooting efforts for network and hardware issues</li>
-          </ul>
-        </motion.div>
-      </motion.div>
-    </div>
-  </div>
-</motion.section>
-
-      
       {/* Projects Section */}
       <motion.section
         id="projects"
@@ -418,14 +338,14 @@ const itemVariants = {
             <motion.div className="projects-grid" variants={itemVariants}>
               <div className="project-card">
                 <div className="project-header">
-                  <h3 className="project-title">Re-Col-Let</h3>
-                  <div className="project-tech">React • TypeScript • AI/ML</div>
+                  <h3 className="project-title">Bliss Rides</h3>
+                  <div className="project-tech">React • TypeScript • Tailwind</div>
                 </div>
                 <p className="project-description">
-                  AI-powered speech recording and summarization tool that captures ideas hands-free and converts them into organized notes.
+                  Modern transportation service platform with booking, scheduling and real-time tracking capabilities.
                 </p>
                 <div className="project-links">
-                  <a href="https://lecture-summarizer-web-ai.vercel.app/" className="project-link">
+                  <a href="https://bliss-rides.com" className="project-link">
                     <ExternalLink size={16} /> Live Demo
                   </a>
                 </div>
@@ -433,14 +353,14 @@ const itemVariants = {
 
               <div className="project-card">
                 <div className="project-header">
-                  <h3 className="project-title">Book Store Platform</h3>
+                  <h3 className="project-title">City of Rest</h3>
                   <div className="project-tech">React • Node.js • MongoDB</div>
                 </div>
                 <p className="project-description">
-                  Full-stack e-commerce platform for digital books with user authentication, payment processing, and content management.
+                  Community platform designed to provide resources and support for urban wellness and relaxation.
                 </p>
                 <div className="project-links">
-                  <a href="https://tangerine-marzipan-a710e0.netlify.app/" className="project-link">
+                  <a href="https://cityofrest.com" className="project-link">
                     <ExternalLink size={16} /> Live Demo
                   </a>
                 </div>
@@ -448,29 +368,14 @@ const itemVariants = {
 
               <div className="project-card">
                 <div className="project-header">
-                  <h3 className="project-title">Social Media Manager</h3>
-                  <div className="project-tech">Vue.js • Express • PostgreSQL</div>
+                  <h3 className="project-title">Francis Tumba Portfolio</h3>
+                  <div className="project-tech">React • TypeScript • Framer Motion</div>
                 </div>
                 <p className="project-description">
-                  Comprehensive dashboard for managing multiple social media accounts with post scheduling and analytics tracking.
+                  Personal portfolio website showcasing professional experience, projects, and technical skills.
                 </p>
                 <div className="project-links">
-                  <a href="https://startling-starship-8b7b9c.netlify.app/" className="project-link">
-                    <ExternalLink size={16} /> Live Demo
-                  </a>
-                </div>
-              </div>
-
-              <div className="project-card">
-                <div className="project-header">
-                  <h3 className="project-title">PianoEar</h3>
-                  <div className="project-tech">JavaScript • Web Audio API</div>
-                </div>
-                <p className="project-description">
-                  Interactive musical ear training game with virtual piano for learning note recognition and chord identification.
-                </p>
-                <div className="project-links">
-                  <a href="https://relaxed-heliotrope-5a37a7.netlify.app/" className="project-link">
+                  <a href="https://francistumba.com" className="project-link">
                     <ExternalLink size={16} /> Live Demo
                   </a>
                 </div>
@@ -480,80 +385,7 @@ const itemVariants = {
         </div>
       </motion.section>
 
-      {/* Education & Certifications Section */}
-      <motion.section
-  id="education"
-  className="section scroll-section"
-  variants={sectionVariants}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true, amount: 0.3 }}
->
-  <div className="section-content">
-    {/* Left: Title */}
-    <div className="section-left">
-      <motion.h2 className="section-title" variants={itemVariants}>
-        <GraduationCap size={24} className="title-icon" />
-        EDUCATION &
-        <br />
-        CERTIFICATIONS
-      </motion.h2>
-    </div>
-
-    {/* Right: Content */}
-    <div className="section-right">
-      <motion.div className="education-content" variants={itemVariants}>
-        {/* Education */}
-        <motion.div className="education-section" variants={itemVariants}>
-          <motion.h3 className="section-subtitle" variants={itemVariants}>
-            Education
-          </motion.h3>
-
-          <motion.div className="education-item" variants={itemVariants}>
-            <h4 className="education-degree">
-              Master of Science in Data Science & Quantitative Analysis
-            </h4>
-            <p className="education-school">WorldQuant University / Graduated: 2024</p>
-          </motion.div>
-
-          <motion.div className="education-item" variants={itemVariants}>
-            <h4 className="education-degree">
-              Bachelor of Technology in Information Technology
-            </h4>
-            <p className="education-school">Cape Peninsula University of Technology / Graduated: 2019</p>
-          </motion.div>
-        </motion.div>
-
-        {/* Certifications */}
-        <motion.div className="certifications-section" variants={itemVariants}>
-          <motion.h3 className="section-subtitle" variants={itemVariants}>
-            Certifications
-          </motion.h3>
-
-          <motion.div className="certifications-list" variants={itemVariants}>
-            <motion.div className="certification-item" variants={itemVariants}>
-              <p className="education-school">AWS Certified Data Analytics</p>
-            </motion.div>
-            <motion.div className="certification-item" variants={itemVariants}>
-              <p className="education-school">AWS Certified Solutions Architect</p>
-            </motion.div>
-            <motion.div className="certification-item" variants={itemVariants}>
-              <p className="education-school">AWS Certified DevOps Engineer</p>
-            </motion.div>
-            <motion.div className="certification-item" variants={itemVariants}>
-              <p className="education-school">Snowflake SnowPro Core Certification</p>
-            </motion.div>
-            <motion.div className="certification-item" variants={itemVariants}>
-              <p className="education-school">Python Institute Certification (PCAP)</p>
-            </motion.div>
-          </motion.div>
-        </motion.div>
-      </motion.div>
-    </div>
-  </div>
-</motion.section>
-
-      {/* Contact Section */}
+{/* Contact Section */}
       <motion.section
   id="contact"
   className="section scroll-section"

@@ -92,6 +92,16 @@
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .section {
+    align-items: flex-start;
+  }
+
+  .section-content {
+    padding-top: 80px;
+  }
+}
+
 .section-content {
   max-width: 1400px;
   width: 100%;
