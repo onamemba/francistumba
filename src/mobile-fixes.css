@@ -26,7 +26,10 @@
   }
 
   .hero-image {
-    margin-bottom: 4.5rem;
+    margin-bottom: 6rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
   }
 
   .hero-text {
@@ -41,6 +44,25 @@
   .hero-title {
     font-size: 2.5rem !important;
     margin-bottom: 1rem !important;
+  }
+
+  .section-indicator {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .indicator-text {
+    text-align: center !important;
+    width: 100%;
+  }
+
+  .indicator-icon {
+    margin: 0 auto;
   }
 }
 
