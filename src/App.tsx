@@ -414,10 +414,10 @@ const itemVariants = {
           <a href="mailto:onamemba@gmail.com" className="contact-link">
             <Mail size={16} /> onamemba@gmail.com
           </a>
-          <a href="https://linkedin.com/in/francistumba" className="contact-link">
+          <a href="https://linkedin.com/in/francis-tumba-8628b4127" className="contact-link">
             <Linkedin size={16} /> LinkedIn
           </a>
-          <a href="https://github.com/francistumba" className="contact-link">
+          <a href="https://github.com/NewSeasonTech" className="contact-link">
             <Github size={16} /> GitHub
           </a>
         </motion.div>
