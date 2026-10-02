@@ -5,6 +5,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF, useAnimations } from '@react-three/drei';
 import { CloudBackground } from './components/CloudBackground';
 import './App.css';
+import './nav-layout.css';
 
 function GLBModel({ url }: { url: string }) {
  const { scene, animations } = useGLTF(url);
@@ -127,7 +128,8 @@ const itemVariants = {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="nav-content">
+        <div className="nav-content nav-3col">
+          {/* LEFT: title (unchanged) */}
           <div className="nav-left">
             <motion.h1 
               className="nav-title"
@@ -137,6 +139,44 @@ const itemVariants = {
             >
               FRANCIS TUMBA
             </motion.h1>
+          </div>
+
+          {/* CENTER: Home, Expertise, Work */}
+          <div className="nav-center">
+            <motion.button 
+              className="nav-home"
+              onClick={() => scrollToSection('hero')}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              whileHover={{ scale: 1.1 }}
+            >
+              Home
+            </motion.button>
+            <motion.button 
+              className="nav-home"
+              onClick={() => scrollToSection('skills')}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              whileHover={{ scale: 1.1 }}
+            >
+              Expertise
+            </motion.button>
+            <motion.button 
+              className="nav-home"
+              onClick={() => scrollToSection('projects')}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              whileHover={{ scale: 1.1 }}
+            >
+              Work
+            </motion.button>
+          </div>
+
+          {/* RIGHT: Get in touch (moved here, same button) */}
+          <div className="nav-right">
             <motion.button 
               className="nav-cta" 
               onClick={() => scrollToSection('contact')}
@@ -147,18 +187,6 @@ const itemVariants = {
               whileTap={{ scale: 0.95 }}
             >
               GET IN TOUCH <ArrowUpRight size={16} />
-            </motion.button>
-          </div>
-          <div className="nav-right">
-            <motion.button 
-              className="nav-home"
-              onClick={() => scrollToSection('hero')}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              whileHover={{ scale: 1.1 }}
-            >
-              Home
             </motion.button>
           </div>
         </div>
