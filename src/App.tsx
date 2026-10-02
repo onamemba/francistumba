@@ -41,6 +41,14 @@ function GLBModel({ url }: { url: string }) {
 
 function App() {
   const [activeSection, setActiveSection] = useState('hero');
+  const [navNarrow, setNavNarrow] = useState(false);
+
+  useEffect(() => {
+    const check = () => setNavNarrow(window.innerWidth <= 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
   const { scrollYProgress } = useScroll();
   const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
 
@@ -127,8 +135,21 @@ const itemVariants = {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="nav-content">
-          <div className="nav-left">
+        <div
+          className="nav-content"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: navNarrow ? '1fr' : '1fr auto 1fr',
+            justifyItems: navNarrow ? 'center' : undefined,
+            alignItems: 'center',
+            gap: navNarrow ? '0.75rem' : '1rem',
+            maxWidth: '1400px',
+            margin: '0 auto',
+            padding: navNarrow ? '1rem' : '1rem 2rem',
+          }}
+        >
+          {/* LEFT: title (same as before) */}
+          <div style={{ justifySelf: navNarrow ? 'center' : 'start' }}>
             <motion.h1 
               className="nav-title"
               initial={{ opacity: 0, x: -50 }}
@@ -137,6 +158,46 @@ const itemVariants = {
             >
               FRANCIS TUMBA
             </motion.h1>
+          </div>
+
+          {/* CENTER: Home, Expertise, Work */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: navNarrow ? '1.5rem' : '2.5rem',
+              justifySelf: 'center',
+            }}
+          >
+            {[
+              { label: 'Home', target: 'hero' },
+              { label: 'Expertise', target: 'skills' },
+              { label: 'Work', target: 'projects' },
+            ].map((item, i) => (
+              <motion.button
+                key={item.label}
+                className="nav-home"
+                style={{
+                  background: 'transparent',
+                  border: 'none',
+                  padding: 0,
+                  color: '#ffffff',
+                  fontSize: '1rem',
+                  cursor: 'pointer',
+                }}
+                onClick={() => scrollToSection(item.target)}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 + i * 0.1, duration: 0.6 }}
+                whileHover={{ scale: 1.1, color: '#4a9eff' }}
+              >
+                {item.label}
+              </motion.button>
+            ))}
+          </div>
+
+          {/* RIGHT: Get in touch (same button, moved) */}
+          <div style={{ justifySelf: navNarrow ? 'center' : 'end' }}>
             <motion.button 
               className="nav-cta" 
               onClick={() => scrollToSection('contact')}
@@ -147,18 +208,6 @@ const itemVariants = {
               whileTap={{ scale: 0.95 }}
             >
               GET IN TOUCH <ArrowUpRight size={16} />
-            </motion.button>
-          </div>
-          <div className="nav-right">
-            <motion.button 
-              className="nav-home"
-              onClick={() => scrollToSection('hero')}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              whileHover={{ scale: 1.1 }}
-            >
-              Home
             </motion.button>
           </div>
         </div>
