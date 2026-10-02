@@ -1,216 +1,114 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { Move, Rotate3d, RotateCcw } from 'lucide-react';
+import { useRef, useMemo } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
+import * as THREE from 'three';
 
-type Mode = 'rotate' | 'move';
-
-const SIZE = 150; // cube edge in px
-const HALF = SIZE / 2;
-const START = { x: -22, y: 35 }; // starting angle in degrees
-
-/* Builds a 16x16 pixel texture (Minecraft-style) in the site's blue/dark palette.
-   No image files needed. */
-function makeTexture(kind: 'side' | 'top'): string {
-  const size = 16;
+function createMinecraftTexture(seed: number): THREE.CanvasTexture {
   const canvas = document.createElement('canvas');
-  canvas.width = size;
-  canvas.height = size;
+  canvas.width = 64;
+  canvas.height = 64;
   const ctx = canvas.getContext('2d')!;
 
-  const base = kind === 'top' ? ['#16345f', '#1b4177', '#214c8a'] : ['#0c192c', '#102240', '#14294d'];
-  let seed = kind === 'top' ? 7 : 3;
-  const rnd = () => {
-    seed = (seed * 16807) % 2147483647;
-    return seed / 2147483647;
+  const colors = [
+    '#0a0a0f', '#0d0d18', '#111122', '#161630',
+    '#1a1a3a', '#0f3460', '#16477a', '#2563eb',
+    '#4a9eff', '#6db5ff', '#3d8bff', '#1e3a5f',
+  ];
+
+  const pixelSize = 8;
+  let rng = seed;
+  const random = () => {
+    rng = (rng * 9301 + 49297) % 233280;
+    return rng / 233280;
   };
 
-  for (let y = 0; y < size; y++) {
-    for (let x = 0; x < size; x++) {
-      ctx.fillStyle = base[Math.floor(rnd() * base.length)];
-      ctx.fillRect(x, y, 1, 1);
+  ctx.fillStyle = '#0a0a0f';
+  ctx.fillRect(0, 0, 64, 64);
+
+  for (let y = 0; y < 64; y += pixelSize) {
+    for (let x = 0; x < 64; x += pixelSize) {
+      const r = random();
+      let idx: number;
+      if (r < 0.28) idx = 0;
+      else if (r < 0.45) idx = 1;
+      else if (r < 0.58) idx = 2;
+      else if (r < 0.68) idx = 3;
+      else if (r < 0.76) idx = 4;
+      else if (r < 0.83) idx = 5;
+      else if (r < 0.89) idx = 6;
+      else if (r < 0.93) idx = 10;
+      else if (r < 0.96) idx = 8;
+      else if (r < 0.98) idx = 9;
+      else idx = 7;
+
+      ctx.fillStyle = colors[idx];
+      ctx.fillRect(x, y, pixelSize, pixelSize);
+
+      if (random() < 0.12) {
+        ctx.fillStyle = colors[Math.min(colors.length - 1, idx + 1)];
+        ctx.fillRect(x, y, pixelSize / 2, pixelSize / 2);
+      }
     }
   }
 
-  // bright "ore" specks in the accent blue
-  for (let i = 0; i < 9; i++) {
-    const x = 1 + Math.floor(rnd() * (size - 3));
-    const y = 1 + Math.floor(rnd() * (size - 3));
-    ctx.fillStyle = '#4a9eff';
-    ctx.fillRect(x, y, 2, 1);
-    ctx.fillStyle = '#9fd0ff';
-    ctx.fillRect(x, y, 1, 1);
-  }
-
-  // dark block edge
-  ctx.fillStyle = 'rgba(0,0,0,0.45)';
-  ctx.fillRect(0, 0, size, 1);
-  ctx.fillRect(0, size - 1, size, 1);
-  ctx.fillRect(0, 0, 1, size);
-  ctx.fillRect(size - 1, 0, 1, size);
-
-  return canvas.toDataURL();
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.magFilter = THREE.NearestFilter;
+  texture.minFilter = THREE.NearestFilter;
+  texture.needsUpdate = true;
+  return texture;
 }
 
-const clamp = (v: number, lim: number) => Math.max(-lim, Math.min(lim, v));
+function FloatingCube() {
+  const meshRef = useRef<THREE.Mesh>(null);
+  const groupRef = useRef<THREE.Group>(null);
+  const baseY = useRef(0);
 
-// each face: where it sits in 3D, and how bright it is (fake lighting)
-const FACES = [
-  { name: 'front', tf: `translateZ(${HALF}px)`, tex: 'side', light: 1 },
-  { name: 'back', tf: `rotateY(180deg) translateZ(${HALF}px)`, tex: 'side', light: 0.55 },
-  { name: 'right', tf: `rotateY(90deg) translateZ(${HALF}px)`, tex: 'side', light: 0.8 },
-  { name: 'left', tf: `rotateY(-90deg) translateZ(${HALF}px)`, tex: 'side', light: 0.65 },
-  { name: 'top', tf: `rotateX(90deg) translateZ(${HALF}px)`, tex: 'top', light: 1.3 },
-  { name: 'bottom', tf: `rotateX(-90deg) translateZ(${HALF}px)`, tex: 'side', light: 0.4 },
-] as const;
+  const texture = useMemo(
+    () => [createMinecraftTexture(42), createMinecraftTexture(137), createMinecraftTexture(269), createMinecraftTexture(851), createMinecraftTexture(991), createMinecraftTexture(333)],
+    []
+  );
 
-export function MinecraftCube() {
-  const [mode, setMode] = useState<Mode>('rotate');
-  const modeRef = useRef<Mode>(mode);
-  modeRef.current = mode;
-
-  const stage = useRef<HTMLDivElement>(null);
-  const posEl = useRef<HTMLDivElement>(null);
-  const cubeEl = useRef<HTMLDivElement>(null);
-
-  const rot = useRef({ ...START });
-  const vel = useRef({ x: 0, y: 0 });
-  const pos = useRef({ x: 0, y: 0 });
-  const target = useRef({ x: 0, y: 0 });
-  const dragging = useRef(false);
-  const last = useRef({ x: 0, y: 0 });
-
-  const textures = useMemo(() => ({ side: makeTexture('side'), top: makeTexture('top') }), []);
-
-  // tiny star field behind the cube (fixed positions so it doesn't flicker on re-render)
-  const stars = useMemo(() => {
-    let s = 11;
-    const r = () => {
-      s = (s * 16807) % 2147483647;
-      return s / 2147483647;
-    };
-    return Array.from({ length: 36 }, () => ({
-      left: `${(r() * 100).toFixed(1)}%`,
-      top: `${(r() * 100).toFixed(1)}%`,
-      size: 1 + Math.floor(r() * 3),
-      delay: `${(r() * 4).toFixed(1)}s`,
-    }));
-  }, []);
-
-  useEffect(() => {
-    const onMove = (e: PointerEvent) => {
-      if (!dragging.current) return;
-      const dx = e.clientX - last.current.x;
-      const dy = e.clientY - last.current.y;
-      last.current = { x: e.clientX, y: e.clientY };
-
-      if (modeRef.current === 'rotate') {
-        rot.current.y += dx * 0.5;
-        rot.current.x -= dy * 0.5;
-        vel.current = { x: -dy * 0.2, y: dx * 0.2 };
-      } else {
-        const s = stage.current;
-        const limX = s ? s.clientWidth / 2 - HALF * 1.3 : 80;
-        const limY = s ? s.clientHeight / 2 - HALF * 1.3 : 80;
-        target.current = {
-          x: clamp(target.current.x + dx, Math.max(0, limX)),
-          y: clamp(target.current.y + dy, Math.max(0, limY)),
-        };
-      }
-    };
-    const onUp = () => {
-      dragging.current = false;
-    };
-
-    window.addEventListener('pointermove', onMove);
-    window.addEventListener('pointerup', onUp);
-    window.addEventListener('pointercancel', onUp);
-
-    let raf = 0;
-    const tick = () => {
-      if (!dragging.current) {
-        // inertia + slow idle spin
-        rot.current.x += vel.current.x;
-        rot.current.y += vel.current.y + 0.25;
-        vel.current.x *= 0.94;
-        vel.current.y *= 0.94;
-      }
-      pos.current.x += (target.current.x - pos.current.x) * 0.18;
-      pos.current.y += (target.current.y - pos.current.y) * 0.18;
-
-      if (posEl.current) {
-        posEl.current.style.transform = `translate3d(${pos.current.x}px, ${pos.current.y}px, 0)`;
-      }
-      if (cubeEl.current) {
-        cubeEl.current.style.transform = `rotateX(${rot.current.x}deg) rotateY(${rot.current.y}deg)`;
-      }
-      raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-
-    return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener('pointermove', onMove);
-      window.removeEventListener('pointerup', onUp);
-      window.removeEventListener('pointercancel', onUp);
-    };
-  }, []);
-
-  const reset = () => {
-    rot.current = { ...START };
-    vel.current = { x: 0, y: 0 };
-    target.current = { x: 0, y: 0 };
-  };
+  useFrame((state) => {
+    if (groupRef.current) {
+      groupRef.current.position.y = baseY.current + Math.sin(state.clock.elapsedTime * 0.8) * 0.25;
+      groupRef.current.rotation.z = Math.sin(state.clock.elapsedTime * 0.4) * 0.05;
+    }
+  });
 
   return (
-    <div className="cx-stage" ref={stage}>
-      <span className="cx-hint">DRAG THE CUBE</span>
-
-      <div className="cx3-stars" aria-hidden="true">
-        {stars.map((s, i) => (
-          <span
-            key={i}
-            style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
-          />
+    <group ref={groupRef}>
+      <mesh ref={meshRef}>
+        <boxGeometry args={[2.6, 2.6, 2.6]} />
+        {texture.map((tex, i) => (
+          <meshStandardMaterial key={i} attach={`material-${i}`} map={tex} />
         ))}
-      </div>
+      </mesh>
+    </group>
+  );
+}
 
-      <div className="cx3-pos" ref={posEl}>
-        <div className="cx3-float">
-          <div
-            className="cx3-cube"
-            ref={cubeEl}
-            onPointerDown={(e) => {
-              e.preventDefault();
-              dragging.current = true;
-              last.current = { x: e.clientX, y: e.clientY };
-              vel.current = { x: 0, y: 0 };
-            }}
-          >
-            {FACES.map((f) => (
-              <div
-                key={f.name}
-                className="cx3-face"
-                style={{
-                  transform: f.tf,
-                  backgroundImage: `url(${textures[f.tex]})`,
-                  filter: `brightness(${f.light})`,
-                }}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="cx-controls">
-        <button className={mode === 'rotate' ? 'on' : ''} onClick={() => setMode('rotate')}>
-          <Rotate3d size={16} /> Rotate
-        </button>
-        <button className={mode === 'move' ? 'on' : ''} onClick={() => setMode('move')}>
-          <Move size={16} /> Move
-        </button>
-        <button onClick={reset} aria-label="Reset cube">
-          <RotateCcw size={16} />
-        </button>
-      </div>
+export function MinecraftCube() {
+  return (
+    <div style={{ width: '100%', height: '100%', cursor: 'grab' }}>
+      <Canvas
+        camera={{ position: [0, 0, 6], fov: 50 }}
+        style={{ background: 'transparent' }}
+        dpr={[1, 2]}
+      >
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[5, 5, 5]} intensity={0.7} />
+        <pointLight position={[-5, -3, 3]} intensity={0.4} color="#4a9eff" />
+        <pointLight position={[3, 4, -2]} intensity={0.2} color="#2563eb" />
+        <FloatingCube />
+        <OrbitControls
+          enableZoom={false}
+          enablePan={true}
+          panSpeed={0.4}
+          rotateSpeed={0.6}
+          minPolarAngle={Math.PI / 6}
+          maxPolarAngle={Math.PI - Math.PI / 6}
+        />
+      </Canvas>
     </div>
   );
 }
